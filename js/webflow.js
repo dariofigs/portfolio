@@ -3300,6 +3300,8 @@ Object.defineProperty(exports, "__esModule", {
 });
 var IX2_ID_DELIMITER = exports.IX2_ID_DELIMITER = '|';
 var WF_PAGE = exports.WF_PAGE = 'data-wf-page';
+var W_MOD_JS = exports.W_MOD_JS = 'w-mod-js';
+var W_MOD_IX = exports.W_MOD_IX = 'w-mod-ix';
 var BOUNDARY_SELECTOR = exports.BOUNDARY_SELECTOR = '.w-dyn-item';
 var CONFIG_X_VALUE = exports.CONFIG_X_VALUE = 'xValue';
 var CONFIG_Y_VALUE = exports.CONFIG_Y_VALUE = 'yValue';
@@ -6134,7 +6136,8 @@ var _shared$IX2EngineCons = _shared.IX2EngineConstants,
     COLON_DELIMITER = _shared$IX2EngineCons.COLON_DELIMITER,
     BOUNDARY_SELECTOR = _shared$IX2EngineCons.BOUNDARY_SELECTOR,
     HTML_ELEMENT = _shared$IX2EngineCons.HTML_ELEMENT,
-    RENDER_GENERAL = _shared$IX2EngineCons.RENDER_GENERAL;
+    RENDER_GENERAL = _shared$IX2EngineCons.RENDER_GENERAL,
+    W_MOD_IX = _shared$IX2EngineCons.W_MOD_IX;
 var _shared$IX2EngineItem = _shared.IX2EngineItemTypes,
     GENERAL_START_ACTION = _shared$IX2EngineItem.GENERAL_START_ACTION,
     GENERAL_CONTINUOUS_ACTION = _shared$IX2EngineItem.GENERAL_CONTINUOUS_ACTION;
@@ -6282,9 +6285,19 @@ function startEngine(_ref7) {
     }));
     if (allowEvents) {
       bindEvents(store);
+      addDocumentClass();
     }
     store.dispatch((0, _IX2EngineActions.sessionStarted)());
     startRenderLoop(store);
+  }
+}
+
+function addDocumentClass() {
+  var _document = document,
+      documentElement = _document.documentElement;
+
+  if (documentElement.className.indexOf(W_MOD_IX) === -1) {
+    documentElement.className += ' ' + W_MOD_IX;
   }
 }
 
