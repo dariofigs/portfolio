@@ -88,7 +88,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 98);
+/******/ 	return __webpack_require__(__webpack_require__.s = 100);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -147,7 +147,7 @@ var _interopRequireWildcard = __webpack_require__(16);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.IX2VanillaUtils = exports.IX2VanillaPlugins = exports.IX2ElementsReducer = exports.IX2EngineConstants = exports.IX2EngineItemTypes = exports.IX2EngineEventTypes = exports.IX2EngineActionTypes = exports.IX2EasingUtils = exports.IX2Easings = exports.IX2BrowserSupport = void 0;
+exports.IX2VanillaUtils = exports.IX2VanillaPlugins = exports.IX2Interactions = exports.IX2Events = exports.IX2ElementsReducer = exports.IX2EngineConstants = exports.IX2EngineItemTypes = exports.IX2EngineEventTypes = exports.IX2EngineActionTypes = exports.IX2EasingUtils = exports.IX2Easings = exports.IX2BrowserSupport = void 0;
 
 var IX2BrowserSupport = _interopRequireWildcard(__webpack_require__(30));
 
@@ -157,15 +157,15 @@ var IX2Easings = _interopRequireWildcard(__webpack_require__(83));
 
 exports.IX2Easings = IX2Easings;
 
-var IX2EasingUtils = _interopRequireWildcard(__webpack_require__(84));
+var IX2EasingUtils = _interopRequireWildcard(__webpack_require__(85));
 
 exports.IX2EasingUtils = IX2EasingUtils;
 
-var IX2EngineActionTypes = _interopRequireWildcard(__webpack_require__(85));
+var IX2EngineActionTypes = _interopRequireWildcard(__webpack_require__(87));
 
 exports.IX2EngineActionTypes = IX2EngineActionTypes;
 
-var IX2EngineEventTypes = _interopRequireWildcard(__webpack_require__(86));
+var IX2EngineEventTypes = _interopRequireWildcard(__webpack_require__(88));
 
 exports.IX2EngineEventTypes = IX2EngineEventTypes;
 
@@ -177,15 +177,23 @@ var IX2EngineConstants = _interopRequireWildcard(__webpack_require__(48));
 
 exports.IX2EngineConstants = IX2EngineConstants;
 
-var IX2ElementsReducer = _interopRequireWildcard(__webpack_require__(184));
+var IX2ElementsReducer = _interopRequireWildcard(__webpack_require__(188));
 
 exports.IX2ElementsReducer = IX2ElementsReducer;
 
-var IX2VanillaPlugins = _interopRequireWildcard(__webpack_require__(87));
+var IX2Events = _interopRequireWildcard(__webpack_require__(189));
+
+exports.IX2Events = IX2Events;
+
+var IX2Interactions = _interopRequireWildcard(__webpack_require__(190));
+
+exports.IX2Interactions = IX2Interactions;
+
+var IX2VanillaPlugins = _interopRequireWildcard(__webpack_require__(89));
 
 exports.IX2VanillaPlugins = IX2VanillaPlugins;
 
-var IX2VanillaUtils = _interopRequireWildcard(__webpack_require__(186));
+var IX2VanillaUtils = _interopRequireWildcard(__webpack_require__(192));
 
 exports.IX2VanillaUtils = IX2VanillaUtils;
 
@@ -245,11 +253,11 @@ module.exports = isObject;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseMatches = __webpack_require__(118),
-    baseMatchesProperty = __webpack_require__(172),
+var baseMatches = __webpack_require__(120),
+    baseMatchesProperty = __webpack_require__(174),
     identity = __webpack_require__(44),
     isArray = __webpack_require__(1),
-    property = __webpack_require__(179);
+    property = __webpack_require__(181);
 
 /**
  * The base implementation of `_.iteratee`.
@@ -282,8 +290,8 @@ module.exports = baseIteratee;
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsNative = __webpack_require__(130),
-    getValue = __webpack_require__(135);
+var baseIsNative = __webpack_require__(132),
+    getValue = __webpack_require__(137);
 
 /**
  * Gets the native function at `key` of `object`.
@@ -341,8 +349,8 @@ module.exports = isObjectLike;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(11),
-    getRawTag = __webpack_require__(131),
-    objectToString = __webpack_require__(132);
+    getRawTag = __webpack_require__(133),
+    objectToString = __webpack_require__(134);
 
 /** `Object#toString` result references. */
 var nullTag = '[object Null]',
@@ -433,7 +441,7 @@ var $win = $(window);
 var $doc = $(document);
 var isFunction = $.isFunction;
 
-var _ = Webflow._ = __webpack_require__(100);
+var _ = Webflow._ = __webpack_require__(102);
 
 var tram = Webflow.tram = __webpack_require__(53) && $.tram;
 var domready = false;
@@ -1534,11 +1542,11 @@ module.exports = _interopRequireWildcard;
 /* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var listCacheClear = __webpack_require__(120),
-    listCacheDelete = __webpack_require__(121),
-    listCacheGet = __webpack_require__(122),
-    listCacheHas = __webpack_require__(123),
-    listCacheSet = __webpack_require__(124);
+var listCacheClear = __webpack_require__(122),
+    listCacheDelete = __webpack_require__(123),
+    listCacheGet = __webpack_require__(124),
+    listCacheHas = __webpack_require__(125),
+    listCacheSet = __webpack_require__(126);
 
 /**
  * Creates an list cache object.
@@ -1611,7 +1619,7 @@ module.exports = nativeCreate;
 /* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isKeyable = __webpack_require__(144);
+var isKeyable = __webpack_require__(146);
 
 /**
  * Gets the data for `map`.
@@ -1678,7 +1686,7 @@ module.exports = keys;
 /* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsArguments = __webpack_require__(162),
+var baseIsArguments = __webpack_require__(164),
     isObjectLike = __webpack_require__(7);
 
 /** Used for built-in method references. */
@@ -1761,7 +1769,7 @@ module.exports = get;
 
 var isArray = __webpack_require__(1),
     isKey = __webpack_require__(43),
-    stringToPath = __webpack_require__(173),
+    stringToPath = __webpack_require__(175),
     toString = __webpack_require__(78);
 
 /**
@@ -1853,7 +1861,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ActionTypes", function() { return ActionTypes; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return createStore; });
 /* harmony import */ var lodash_es_isPlainObject__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(55);
-/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(113);
+/* harmony import */ var symbol_observable__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(115);
 
 
 
@@ -2314,11 +2322,11 @@ module.exports = Map;
 /* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var mapCacheClear = __webpack_require__(136),
-    mapCacheDelete = __webpack_require__(143),
-    mapCacheGet = __webpack_require__(145),
-    mapCacheHas = __webpack_require__(146),
-    mapCacheSet = __webpack_require__(147);
+var mapCacheClear = __webpack_require__(138),
+    mapCacheDelete = __webpack_require__(145),
+    mapCacheGet = __webpack_require__(147),
+    mapCacheHas = __webpack_require__(148),
+    mapCacheSet = __webpack_require__(149);
 
 /**
  * Creates a map cache object to store key-value pairs.
@@ -2379,7 +2387,7 @@ module.exports = arrayPush;
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var root = __webpack_require__(3),
-    stubFalse = __webpack_require__(163);
+    stubFalse = __webpack_require__(165);
 
 /** Detect free variable `exports`. */
 var freeExports =  true && exports && !exports.nodeType && exports;
@@ -2454,9 +2462,9 @@ module.exports = isIndex;
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsTypedArray = __webpack_require__(164),
-    baseUnary = __webpack_require__(165),
-    nodeUtil = __webpack_require__(166);
+var baseIsTypedArray = __webpack_require__(166),
+    baseUnary = __webpack_require__(167),
+    nodeUtil = __webpack_require__(168);
 
 /* Node.js helper references. */
 var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
@@ -2529,7 +2537,7 @@ module.exports = isLength;
 /***/ (function(module, exports, __webpack_require__) {
 
 var isPrototype = __webpack_require__(40),
-    nativeKeys = __webpack_require__(167);
+    nativeKeys = __webpack_require__(169);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -2588,10 +2596,10 @@ module.exports = isPrototype;
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var DataView = __webpack_require__(168),
+var DataView = __webpack_require__(170),
     Map = __webpack_require__(32),
-    Promise = __webpack_require__(169),
-    Set = __webpack_require__(170),
+    Promise = __webpack_require__(171),
+    Set = __webpack_require__(172),
     WeakMap = __webpack_require__(75),
     baseGetTag = __webpack_require__(8),
     toSource = __webpack_require__(66);
@@ -2744,7 +2752,7 @@ module.exports = identity;
 /* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var toFinite = __webpack_require__(182);
+var toFinite = __webpack_require__(184);
 
 /**
  * Converts `value` to an integer.
@@ -3150,10 +3158,12 @@ var sessionStopped = function sessionStopped() {
 exports.sessionStopped = sessionStopped;
 
 var previewRequested = function previewRequested(_ref2) {
-  var rawData = _ref2.rawData;
+  var rawData = _ref2.rawData,
+      defer = _ref2.defer;
   return {
     type: IX2_PREVIEW_REQUESTED,
     payload: {
+      defer: defer,
       rawData: rawData
     }
   };
@@ -3357,7 +3367,7 @@ exports.mediaQueriesDefined = mediaQueriesDefined;
 /* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(95),
+var baseCreate = __webpack_require__(97),
     baseLodash = __webpack_require__(51);
 
 /**
@@ -3401,7 +3411,7 @@ module.exports = baseLodash;
 /* 52 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseCreate = __webpack_require__(95),
+var baseCreate = __webpack_require__(97),
     baseLodash = __webpack_require__(51);
 
 /** Used as references for the maximum length and index of an array. */
@@ -4364,9 +4374,9 @@ if (false) {}
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _baseGetTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(105);
-/* harmony import */ var _getPrototype_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(110);
-/* harmony import */ var _isObjectLike_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(112);
+/* harmony import */ var _baseGetTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(107);
+/* harmony import */ var _getPrototype_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(112);
+/* harmony import */ var _isObjectLike_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(114);
 
 
 
@@ -4437,7 +4447,7 @@ function isPlainObject(value) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(106);
+/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(108);
 
 
 /** Built-in value references. */
@@ -4721,7 +4731,7 @@ function applyMiddleware() {
 /***/ (function(module, exports, __webpack_require__) {
 
 var createFind = __webpack_require__(62),
-    findIndex = __webpack_require__(181);
+    findIndex = __webpack_require__(183);
 
 /**
  * Iterates over elements of `collection`, returning the first element
@@ -4800,11 +4810,11 @@ module.exports = createFind;
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(17),
-    stackClear = __webpack_require__(125),
-    stackDelete = __webpack_require__(126),
-    stackGet = __webpack_require__(127),
-    stackHas = __webpack_require__(128),
-    stackSet = __webpack_require__(129);
+    stackClear = __webpack_require__(127),
+    stackDelete = __webpack_require__(128),
+    stackGet = __webpack_require__(129),
+    stackHas = __webpack_require__(130),
+    stackSet = __webpack_require__(131);
 
 /**
  * Creates a stack cache object to store key-value pairs.
@@ -4918,7 +4928,7 @@ module.exports = toSource;
 /* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsEqualDeep = __webpack_require__(148),
+var baseIsEqualDeep = __webpack_require__(150),
     isObjectLike = __webpack_require__(7);
 
 /**
@@ -4952,9 +4962,9 @@ module.exports = baseIsEqual;
 /* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var SetCache = __webpack_require__(149),
-    arraySome = __webpack_require__(152),
-    cacheHas = __webpack_require__(153);
+var SetCache = __webpack_require__(151),
+    arraySome = __webpack_require__(154),
+    cacheHas = __webpack_require__(155);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -5067,7 +5077,7 @@ module.exports = baseGetAllKeys;
 /* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayFilter = __webpack_require__(160),
+var arrayFilter = __webpack_require__(162),
     stubArray = __webpack_require__(71);
 
 /** Used for built-in method references. */
@@ -5132,7 +5142,7 @@ module.exports = stubArray;
 /* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseTimes = __webpack_require__(161),
+var baseTimes = __webpack_require__(163),
     isArguments = __webpack_require__(22),
     isArray = __webpack_require__(1),
     isBuffer = __webpack_require__(35),
@@ -5493,7 +5503,7 @@ exports.bounce = bounce;
 exports.bouncePast = bouncePast;
 exports.easeInOut = exports.easeOut = exports.easeIn = exports.ease = void 0;
 
-var _bezierEasing = _interopRequireDefault(__webpack_require__(183)); // Easing functions adapted from Thomas Fuchs & Jeremy Kahn
+var _bezierEasing = _interopRequireDefault(__webpack_require__(84)); // Easing functions adapted from Thomas Fuchs & Jeremy Kahn
 // Easing Equations (c) 2003 Robert Penner, BSD license
 // https://raw.github.com/danro/easing-js/master/LICENSE
 
@@ -5782,10 +5792,126 @@ function bouncePast(pos) {
 
 /***/ }),
 /* 84 */
+/***/ (function(module, exports) {
+
+/**
+ * https://github.com/gre/bezier-easing
+ * BezierEasing - use bezier curve for transition easing function
+ * by Gaëtan Renaudeau 2014 - 2015 – MIT License
+ */
+
+// These values are established by empiricism with tests (tradeoff: performance VS precision)
+var NEWTON_ITERATIONS = 4;
+var NEWTON_MIN_SLOPE = 0.001;
+var SUBDIVISION_PRECISION = 0.0000001;
+var SUBDIVISION_MAX_ITERATIONS = 10;
+
+var kSplineTableSize = 11;
+var kSampleStepSize = 1.0 / (kSplineTableSize - 1.0);
+
+var float32ArraySupported = typeof Float32Array === 'function';
+
+function A (aA1, aA2) { return 1.0 - 3.0 * aA2 + 3.0 * aA1; }
+function B (aA1, aA2) { return 3.0 * aA2 - 6.0 * aA1; }
+function C (aA1)      { return 3.0 * aA1; }
+
+// Returns x(t) given t, x1, and x2, or y(t) given t, y1, and y2.
+function calcBezier (aT, aA1, aA2) { return ((A(aA1, aA2) * aT + B(aA1, aA2)) * aT + C(aA1)) * aT; }
+
+// Returns dx/dt given t, x1, and x2, or dy/dt given t, y1, and y2.
+function getSlope (aT, aA1, aA2) { return 3.0 * A(aA1, aA2) * aT * aT + 2.0 * B(aA1, aA2) * aT + C(aA1); }
+
+function binarySubdivide (aX, aA, aB, mX1, mX2) {
+  var currentX, currentT, i = 0;
+  do {
+    currentT = aA + (aB - aA) / 2.0;
+    currentX = calcBezier(currentT, mX1, mX2) - aX;
+    if (currentX > 0.0) {
+      aB = currentT;
+    } else {
+      aA = currentT;
+    }
+  } while (Math.abs(currentX) > SUBDIVISION_PRECISION && ++i < SUBDIVISION_MAX_ITERATIONS);
+  return currentT;
+}
+
+function newtonRaphsonIterate (aX, aGuessT, mX1, mX2) {
+ for (var i = 0; i < NEWTON_ITERATIONS; ++i) {
+   var currentSlope = getSlope(aGuessT, mX1, mX2);
+   if (currentSlope === 0.0) {
+     return aGuessT;
+   }
+   var currentX = calcBezier(aGuessT, mX1, mX2) - aX;
+   aGuessT -= currentX / currentSlope;
+ }
+ return aGuessT;
+}
+
+module.exports = function bezier (mX1, mY1, mX2, mY2) {
+  if (!(0 <= mX1 && mX1 <= 1 && 0 <= mX2 && mX2 <= 1)) {
+    throw new Error('bezier x values must be in [0, 1] range');
+  }
+
+  // Precompute samples table
+  var sampleValues = float32ArraySupported ? new Float32Array(kSplineTableSize) : new Array(kSplineTableSize);
+  if (mX1 !== mY1 || mX2 !== mY2) {
+    for (var i = 0; i < kSplineTableSize; ++i) {
+      sampleValues[i] = calcBezier(i * kSampleStepSize, mX1, mX2);
+    }
+  }
+
+  function getTForX (aX) {
+    var intervalStart = 0.0;
+    var currentSample = 1;
+    var lastSample = kSplineTableSize - 1;
+
+    for (; currentSample !== lastSample && sampleValues[currentSample] <= aX; ++currentSample) {
+      intervalStart += kSampleStepSize;
+    }
+    --currentSample;
+
+    // Interpolate to provide an initial guess for t
+    var dist = (aX - sampleValues[currentSample]) / (sampleValues[currentSample + 1] - sampleValues[currentSample]);
+    var guessForT = intervalStart + dist * kSampleStepSize;
+
+    var initialSlope = getSlope(guessForT, mX1, mX2);
+    if (initialSlope >= NEWTON_MIN_SLOPE) {
+      return newtonRaphsonIterate(aX, guessForT, mX1, mX2);
+    } else if (initialSlope === 0.0) {
+      return guessForT;
+    } else {
+      return binarySubdivide(aX, intervalStart, intervalStart + kSampleStepSize, mX1, mX2);
+    }
+  }
+
+  return function BezierEasing (x) {
+    if (mX1 === mY1 && mX2 === mY2) {
+      return x; // linear
+    }
+    // Because JavaScript number are imprecise, we should guarantee the extremes are right.
+    if (x === 0) {
+      return 0;
+    }
+    if (x === 1) {
+      return 1;
+    }
+    return calcBezier(getTForX(x), mY1, mY2);
+  };
+};
+
+
+/***/ }),
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
+
+var _interopRequireDefault2 = __webpack_require__(0);
+
+var _toConsumableArray2 = _interopRequireDefault2(__webpack_require__(86));
+
+var _interopRequireDefault = __webpack_require__(0);
 
 var _interopRequireWildcard = __webpack_require__(16);
 
@@ -5793,9 +5919,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.optimizeFloat = optimizeFloat;
+exports.createBezierEasing = createBezierEasing;
 exports.applyEasing = applyEasing;
 
 var easings = _interopRequireWildcard(__webpack_require__(83));
+
+var _bezierEasing = _interopRequireDefault(__webpack_require__(84));
 
 function optimizeFloat(value) {
   var digits = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 5;
@@ -5807,7 +5936,11 @@ function optimizeFloat(value) {
   return Math.abs(_float) > 0.0001 ? _float : 0;
 }
 
-function applyEasing(easing, position) {
+function createBezierEasing(easing) {
+  return (0, _bezierEasing["default"]).apply(void 0, (0, _toConsumableArray2["default"])(easing));
+}
+
+function applyEasing(easing, position, customEasingFn) {
   if (position === 0) {
     return 0;
   }
@@ -5816,11 +5949,31 @@ function applyEasing(easing, position) {
     return 1;
   }
 
+  if (customEasingFn) {
+    return optimizeFloat(position > 0 ? customEasingFn(position) : position);
+  }
+
   return optimizeFloat(position > 0 && easing && easings[easing] ? easings[easing](position) : position);
 }
 
 /***/ }),
-/* 85 */
+/* 86 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var arrayWithoutHoles = __webpack_require__(185);
+
+var iterableToArray = __webpack_require__(186);
+
+var nonIterableSpread = __webpack_require__(187);
+
+function _toConsumableArray(arr) {
+  return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
+}
+
+module.exports = _toConsumableArray;
+
+/***/ }),
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5872,7 +6025,7 @@ var IX2_TEST_FRAME_RENDERED = 'IX2_TEST_FRAME_RENDERED';
 exports.IX2_TEST_FRAME_RENDERED = IX2_TEST_FRAME_RENDERED;
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5944,7 +6097,7 @@ var ECOMMERCE_CART_CLOSE = 'ECOMMERCE_CART_CLOSE';
 exports.ECOMMERCE_CART_CLOSE = ECOMMERCE_CART_CLOSE;
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5960,7 +6113,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.isPluginType = isPluginType;
 exports.clearPlugin = exports.renderPlugin = exports.createPluginInstance = exports.getPluginDestination = exports.getPluginDuration = exports.getPluginOrigin = exports.getPluginConfig = void 0;
 
-var _IX2LottieUtils = __webpack_require__(185);
+var _IX2LottieUtils = __webpack_require__(191);
 
 var _IX2EngineItemTypes = __webpack_require__(47);
 
@@ -6022,11 +6175,11 @@ var clearPlugin = pluginMethod('clear');
 exports.clearPlugin = clearPlugin;
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseForOwn = __webpack_require__(89),
-    createBaseEach = __webpack_require__(192);
+var baseForOwn = __webpack_require__(91),
+    createBaseEach = __webpack_require__(198);
 
 /**
  * The base implementation of `_.forEach` without support for iteratee shorthands.
@@ -6042,10 +6195,10 @@ module.exports = baseEach;
 
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFor = __webpack_require__(190),
+var baseFor = __webpack_require__(196),
     keys = __webpack_require__(21);
 
 /**
@@ -6064,7 +6217,7 @@ module.exports = baseForOwn;
 
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6072,7 +6225,7 @@ module.exports = baseForOwn;
 
 exports.__esModule = true;
 
-var _shallowEqual = __webpack_require__(196);
+var _shallowEqual = __webpack_require__(202);
 
 var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
@@ -6081,7 +6234,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _shallowEqual2.default;
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -6089,7 +6242,7 @@ exports.default = _shallowEqual2.default;
 
 var _interopRequireDefault2 = __webpack_require__(0);
 
-var _toConsumableArray2 = _interopRequireDefault2(__webpack_require__(201));
+var _toConsumableArray2 = _interopRequireDefault2(__webpack_require__(86));
 
 var _interopRequireWildcard = __webpack_require__(16);
 
@@ -6107,35 +6260,35 @@ exports.startActionGroup = startActionGroup;
 
 var _objectSpread2 = _interopRequireDefault(__webpack_require__(26));
 
-var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(205));
+var _objectWithoutProperties2 = _interopRequireDefault(__webpack_require__(207));
 
 var _find = _interopRequireDefault(__webpack_require__(61));
 
 var _get = _interopRequireDefault(__webpack_require__(23));
 
-var _size = _interopRequireDefault(__webpack_require__(207));
+var _size = _interopRequireDefault(__webpack_require__(209));
 
-var _omitBy = _interopRequireDefault(__webpack_require__(213));
+var _omitBy = _interopRequireDefault(__webpack_require__(215));
 
-var _isEmpty = _interopRequireDefault(__webpack_require__(225));
+var _isEmpty = _interopRequireDefault(__webpack_require__(227));
 
-var _mapValues = _interopRequireDefault(__webpack_require__(226));
+var _mapValues = _interopRequireDefault(__webpack_require__(228));
 
-var _forEach = _interopRequireDefault(__webpack_require__(227));
+var _forEach = _interopRequireDefault(__webpack_require__(229));
 
-var _endsWith = _interopRequireDefault(__webpack_require__(230));
+var _endsWith = _interopRequireDefault(__webpack_require__(232));
 
-var _throttle = _interopRequireDefault(__webpack_require__(231));
+var _throttle = _interopRequireDefault(__webpack_require__(233));
 
-var _shallowEqual = _interopRequireDefault(__webpack_require__(90));
+var _shallowEqual = _interopRequireDefault(__webpack_require__(92));
 
 var _shared = __webpack_require__(2);
 
 var _IX2EngineActions = __webpack_require__(49);
 
-var elementApi = _interopRequireWildcard(__webpack_require__(234));
+var elementApi = _interopRequireWildcard(__webpack_require__(236));
 
-var _IX2VanillaEvents = _interopRequireDefault(__webpack_require__(235));
+var _IX2VanillaEvents = _interopRequireDefault(__webpack_require__(237));
 /* eslint-env browser */
 
 
@@ -6250,13 +6403,19 @@ function observeOneRenderTick(store, onTick) {
 }
 
 function handlePreviewRequest(_ref7, store) {
-  var rawData = _ref7.rawData;
-  startEngine({
-    store: store,
-    rawData: rawData,
-    allowEvents: true
-  });
-  dispatchPageUpdateEvent();
+  var rawData = _ref7.rawData,
+      defer = _ref7.defer;
+
+  var start = function start() {
+    startEngine({
+      store: store,
+      rawData: rawData,
+      allowEvents: true
+    });
+    dispatchPageUpdateEvent();
+  };
+
+  defer ? setTimeout(start, 0) : start();
 }
 
 function dispatchPageUpdateEvent() {
@@ -7184,10 +7343,10 @@ function handleInstanceChange(instance, store) {
 }
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var defineProperty = __webpack_require__(93);
+var defineProperty = __webpack_require__(95);
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -7215,7 +7374,7 @@ module.exports = baseAssignValue;
 
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(6);
@@ -7232,7 +7391,7 @@ module.exports = defineProperty;
 
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports) {
 
 /**
@@ -7260,7 +7419,7 @@ module.exports = baseClamp;
 
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(4);
@@ -7296,11 +7455,11 @@ module.exports = baseCreate;
 
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var metaMap = __webpack_require__(248),
-    noop = __webpack_require__(249);
+var metaMap = __webpack_require__(250),
+    noop = __webpack_require__(251);
 
 /**
  * Gets metadata for `func`.
@@ -7317,10 +7476,10 @@ module.exports = getData;
 
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var realNames = __webpack_require__(250);
+var realNames = __webpack_require__(252);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -7354,19 +7513,19 @@ module.exports = getFuncName;
 
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(99);
 __webpack_require__(101);
 __webpack_require__(103);
-__webpack_require__(256);
-__webpack_require__(257);
-module.exports = __webpack_require__(258);
+__webpack_require__(105);
+__webpack_require__(258);
+__webpack_require__(259);
+module.exports = __webpack_require__(260);
 
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7457,7 +7616,7 @@ Webflow.define('brand', module.exports = function ($) {
 });
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7832,7 +7991,7 @@ module.exports = function () {
 /* eslint-enable */
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7844,7 +8003,7 @@ module.exports = function () {
 // eslint-disable-next-line strict
 
 
-var IXEvents = __webpack_require__(102);
+var IXEvents = __webpack_require__(104);
 
 function dispatchCustomEvent(element, eventName) {
   var event = document.createEvent('CustomEvent');
@@ -7881,7 +8040,7 @@ $.extend(api.triggers, eventTriggers);
 module.exports = api;
 
 /***/ }),
-/* 102 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7961,7 +8120,7 @@ api.async();
 module.exports = api;
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7975,7 +8134,7 @@ module.exports = api;
 
 var Webflow = __webpack_require__(10);
 
-var ix2 = __webpack_require__(104);
+var ix2 = __webpack_require__(106);
 
 ix2.setEnv(Webflow.env);
 Webflow.define('ix2', module.exports = function () {
@@ -7983,7 +8142,7 @@ Webflow.define('ix2', module.exports = function () {
 });
 
 /***/ }),
-/* 104 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8003,9 +8162,9 @@ exports.actions = exports.store = void 0;
 
 var _redux = __webpack_require__(54);
 
-var _IX2Reducer = _interopRequireDefault(__webpack_require__(116));
+var _IX2Reducer = _interopRequireDefault(__webpack_require__(118));
 
-var _IX2VanillaEngine = __webpack_require__(91);
+var _IX2VanillaEngine = __webpack_require__(93);
 
 var actions = _interopRequireWildcard(__webpack_require__(49));
 
@@ -8033,14 +8192,14 @@ function destroy() {
 }
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Symbol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(56);
-/* harmony import */ var _getRawTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(108);
-/* harmony import */ var _objectToString_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(109);
+/* harmony import */ var _getRawTag_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(110);
+/* harmony import */ var _objectToString_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(111);
 
 
 
@@ -8072,12 +8231,12 @@ function baseGetTag(value) {
 
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(107);
+/* harmony import */ var _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(109);
 
 
 /** Detect free variable `self`. */
@@ -8090,7 +8249,7 @@ var root = _freeGlobal_js__WEBPACK_IMPORTED_MODULE_0__["default"] || freeSelf ||
 
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8103,7 +8262,7 @@ var freeGlobal = typeof global == 'object' && global && global.Object === Object
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(28)))
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8158,7 +8317,7 @@ function getRawTag(value) {
 
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8188,12 +8347,12 @@ function objectToString(value) {
 
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _overArg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(111);
+/* harmony import */ var _overArg_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(113);
 
 
 /** Built-in value references. */
@@ -8203,7 +8362,7 @@ var getPrototype = Object(_overArg_js__WEBPACK_IMPORTED_MODULE_0__["default"])(O
 
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8226,7 +8385,7 @@ function overArg(func, transform) {
 
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8263,12 +8422,12 @@ function isObjectLike(value) {
 
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(115);
+/* WEBPACK VAR INJECTION */(function(global, module) {/* harmony import */ var _ponyfill_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(117);
 /* global window */
 
 
@@ -8287,10 +8446,10 @@ if (typeof self !== 'undefined') {
 var result = Object(_ponyfill_js__WEBPACK_IMPORTED_MODULE_0__["default"])(root);
 /* harmony default export */ __webpack_exports__["default"] = (result);
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(28), __webpack_require__(114)(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(28), __webpack_require__(116)(module)))
 
 /***/ }),
-/* 114 */
+/* 116 */
 /***/ (function(module, exports) {
 
 module.exports = function(originalModule) {
@@ -8320,7 +8479,7 @@ module.exports = function(originalModule) {
 
 
 /***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8346,7 +8505,7 @@ function symbolObservablePonyfill(root) {
 
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8359,17 +8518,17 @@ exports["default"] = void 0;
 
 var _redux = __webpack_require__(54);
 
-var _IX2DataReducer = __webpack_require__(117);
+var _IX2DataReducer = __webpack_require__(119);
 
-var _IX2RequestReducer = __webpack_require__(197);
+var _IX2RequestReducer = __webpack_require__(203);
 
-var _IX2SessionReducer = __webpack_require__(198);
+var _IX2SessionReducer = __webpack_require__(204);
 
 var _shared = __webpack_require__(2);
 
-var _IX2InstancesReducer = __webpack_require__(199);
+var _IX2InstancesReducer = __webpack_require__(205);
 
-var _IX2ParametersReducer = __webpack_require__(200);
+var _IX2ParametersReducer = __webpack_require__(206);
 
 var ixElements = _shared.IX2ElementsReducer.ixElements;
 
@@ -8385,7 +8544,7 @@ var _default = (0, _redux.combineReducers)({
 exports["default"] = _default;
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8420,11 +8579,11 @@ var ixData = function ixData() {
 exports.ixData = ixData;
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseIsMatch = __webpack_require__(119),
-    getMatchData = __webpack_require__(171),
+var baseIsMatch = __webpack_require__(121),
+    getMatchData = __webpack_require__(173),
     matchesStrictComparable = __webpack_require__(77);
 
 /**
@@ -8448,7 +8607,7 @@ module.exports = baseMatches;
 
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(63),
@@ -8516,7 +8675,7 @@ module.exports = baseIsMatch;
 
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports) {
 
 /**
@@ -8535,7 +8694,7 @@ module.exports = listCacheClear;
 
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(18);
@@ -8576,7 +8735,7 @@ module.exports = listCacheDelete;
 
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(18);
@@ -8601,7 +8760,7 @@ module.exports = listCacheGet;
 
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(18);
@@ -8623,7 +8782,7 @@ module.exports = listCacheHas;
 
 
 /***/ }),
-/* 124 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var assocIndexOf = __webpack_require__(18);
@@ -8655,7 +8814,7 @@ module.exports = listCacheSet;
 
 
 /***/ }),
-/* 125 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(17);
@@ -8676,7 +8835,7 @@ module.exports = stackClear;
 
 
 /***/ }),
-/* 126 */
+/* 128 */
 /***/ (function(module, exports) {
 
 /**
@@ -8700,7 +8859,7 @@ module.exports = stackDelete;
 
 
 /***/ }),
-/* 127 */
+/* 129 */
 /***/ (function(module, exports) {
 
 /**
@@ -8720,7 +8879,7 @@ module.exports = stackGet;
 
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports) {
 
 /**
@@ -8740,7 +8899,7 @@ module.exports = stackHas;
 
 
 /***/ }),
-/* 129 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var ListCache = __webpack_require__(17),
@@ -8780,11 +8939,11 @@ module.exports = stackSet;
 
 
 /***/ }),
-/* 130 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isFunction = __webpack_require__(64),
-    isMasked = __webpack_require__(133),
+    isMasked = __webpack_require__(135),
     isObject = __webpack_require__(4),
     toSource = __webpack_require__(66);
 
@@ -8833,7 +8992,7 @@ module.exports = baseIsNative;
 
 
 /***/ }),
-/* 131 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(11);
@@ -8885,7 +9044,7 @@ module.exports = getRawTag;
 
 
 /***/ }),
-/* 132 */
+/* 134 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -8913,10 +9072,10 @@ module.exports = objectToString;
 
 
 /***/ }),
-/* 133 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var coreJsData = __webpack_require__(134);
+var coreJsData = __webpack_require__(136);
 
 /** Used to detect methods masquerading as native. */
 var maskSrcKey = (function() {
@@ -8939,7 +9098,7 @@ module.exports = isMasked;
 
 
 /***/ }),
-/* 134 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(3);
@@ -8951,7 +9110,7 @@ module.exports = coreJsData;
 
 
 /***/ }),
-/* 135 */
+/* 137 */
 /***/ (function(module, exports) {
 
 /**
@@ -8970,10 +9129,10 @@ module.exports = getValue;
 
 
 /***/ }),
-/* 136 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Hash = __webpack_require__(137),
+var Hash = __webpack_require__(139),
     ListCache = __webpack_require__(17),
     Map = __webpack_require__(32);
 
@@ -8997,14 +9156,14 @@ module.exports = mapCacheClear;
 
 
 /***/ }),
-/* 137 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var hashClear = __webpack_require__(138),
-    hashDelete = __webpack_require__(139),
-    hashGet = __webpack_require__(140),
-    hashHas = __webpack_require__(141),
-    hashSet = __webpack_require__(142);
+var hashClear = __webpack_require__(140),
+    hashDelete = __webpack_require__(141),
+    hashGet = __webpack_require__(142),
+    hashHas = __webpack_require__(143),
+    hashSet = __webpack_require__(144);
 
 /**
  * Creates a hash object.
@@ -9035,7 +9194,7 @@ module.exports = Hash;
 
 
 /***/ }),
-/* 138 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(19);
@@ -9056,7 +9215,7 @@ module.exports = hashClear;
 
 
 /***/ }),
-/* 139 */
+/* 141 */
 /***/ (function(module, exports) {
 
 /**
@@ -9079,7 +9238,7 @@ module.exports = hashDelete;
 
 
 /***/ }),
-/* 140 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(19);
@@ -9115,7 +9274,7 @@ module.exports = hashGet;
 
 
 /***/ }),
-/* 141 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(19);
@@ -9144,7 +9303,7 @@ module.exports = hashHas;
 
 
 /***/ }),
-/* 142 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var nativeCreate = __webpack_require__(19);
@@ -9173,7 +9332,7 @@ module.exports = hashSet;
 
 
 /***/ }),
-/* 143 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(20);
@@ -9197,7 +9356,7 @@ module.exports = mapCacheDelete;
 
 
 /***/ }),
-/* 144 */
+/* 146 */
 /***/ (function(module, exports) {
 
 /**
@@ -9218,7 +9377,7 @@ module.exports = isKeyable;
 
 
 /***/ }),
-/* 145 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(20);
@@ -9240,7 +9399,7 @@ module.exports = mapCacheGet;
 
 
 /***/ }),
-/* 146 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(20);
@@ -9262,7 +9421,7 @@ module.exports = mapCacheHas;
 
 
 /***/ }),
-/* 147 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getMapData = __webpack_require__(20);
@@ -9290,13 +9449,13 @@ module.exports = mapCacheSet;
 
 
 /***/ }),
-/* 148 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(63),
     equalArrays = __webpack_require__(68),
-    equalByTag = __webpack_require__(154),
-    equalObjects = __webpack_require__(158),
+    equalByTag = __webpack_require__(156),
+    equalObjects = __webpack_require__(160),
     getTag = __webpack_require__(41),
     isArray = __webpack_require__(1),
     isBuffer = __webpack_require__(35),
@@ -9379,12 +9538,12 @@ module.exports = baseIsEqualDeep;
 
 
 /***/ }),
-/* 149 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MapCache = __webpack_require__(33),
-    setCacheAdd = __webpack_require__(150),
-    setCacheHas = __webpack_require__(151);
+    setCacheAdd = __webpack_require__(152),
+    setCacheHas = __webpack_require__(153);
 
 /**
  *
@@ -9412,7 +9571,7 @@ module.exports = SetCache;
 
 
 /***/ }),
-/* 150 */
+/* 152 */
 /***/ (function(module, exports) {
 
 /** Used to stand-in for `undefined` hash values. */
@@ -9437,7 +9596,7 @@ module.exports = setCacheAdd;
 
 
 /***/ }),
-/* 151 */
+/* 153 */
 /***/ (function(module, exports) {
 
 /**
@@ -9457,7 +9616,7 @@ module.exports = setCacheHas;
 
 
 /***/ }),
-/* 152 */
+/* 154 */
 /***/ (function(module, exports) {
 
 /**
@@ -9486,7 +9645,7 @@ module.exports = arraySome;
 
 
 /***/ }),
-/* 153 */
+/* 155 */
 /***/ (function(module, exports) {
 
 /**
@@ -9505,15 +9664,15 @@ module.exports = cacheHas;
 
 
 /***/ }),
-/* 154 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(11),
-    Uint8Array = __webpack_require__(155),
+    Uint8Array = __webpack_require__(157),
     eq = __webpack_require__(31),
     equalArrays = __webpack_require__(68),
-    mapToArray = __webpack_require__(156),
-    setToArray = __webpack_require__(157);
+    mapToArray = __webpack_require__(158),
+    setToArray = __webpack_require__(159);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1,
@@ -9623,7 +9782,7 @@ module.exports = equalByTag;
 
 
 /***/ }),
-/* 155 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(3);
@@ -9635,7 +9794,7 @@ module.exports = Uint8Array;
 
 
 /***/ }),
-/* 156 */
+/* 158 */
 /***/ (function(module, exports) {
 
 /**
@@ -9659,7 +9818,7 @@ module.exports = mapToArray;
 
 
 /***/ }),
-/* 157 */
+/* 159 */
 /***/ (function(module, exports) {
 
 /**
@@ -9683,10 +9842,10 @@ module.exports = setToArray;
 
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getAllKeys = __webpack_require__(159);
+var getAllKeys = __webpack_require__(161);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -9778,7 +9937,7 @@ module.exports = equalObjects;
 
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetAllKeys = __webpack_require__(69),
@@ -9800,7 +9959,7 @@ module.exports = getAllKeys;
 
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, exports) {
 
 /**
@@ -9831,7 +9990,7 @@ module.exports = arrayFilter;
 
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, exports) {
 
 /**
@@ -9857,7 +10016,7 @@ module.exports = baseTimes;
 
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(8),
@@ -9881,7 +10040,7 @@ module.exports = baseIsArguments;
 
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports) {
 
 /**
@@ -9905,7 +10064,7 @@ module.exports = stubFalse;
 
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(8),
@@ -9971,7 +10130,7 @@ module.exports = baseIsTypedArray;
 
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, exports) {
 
 /**
@@ -9991,7 +10150,7 @@ module.exports = baseUnary;
 
 
 /***/ }),
-/* 166 */
+/* 168 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(65);
@@ -10028,7 +10187,7 @@ module.exports = nodeUtil;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(73)(module)))
 
 /***/ }),
-/* 167 */
+/* 169 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var overArg = __webpack_require__(74);
@@ -10040,7 +10199,7 @@ module.exports = nativeKeys;
 
 
 /***/ }),
-/* 168 */
+/* 170 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(6),
@@ -10053,7 +10212,7 @@ module.exports = DataView;
 
 
 /***/ }),
-/* 169 */
+/* 171 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(6),
@@ -10066,7 +10225,7 @@ module.exports = Promise;
 
 
 /***/ }),
-/* 170 */
+/* 172 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(6),
@@ -10079,7 +10238,7 @@ module.exports = Set;
 
 
 /***/ }),
-/* 171 */
+/* 173 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isStrictComparable = __webpack_require__(76),
@@ -10109,12 +10268,12 @@ module.exports = getMatchData;
 
 
 /***/ }),
-/* 172 */
+/* 174 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsEqual = __webpack_require__(67),
     get = __webpack_require__(23),
-    hasIn = __webpack_require__(176),
+    hasIn = __webpack_require__(178),
     isKey = __webpack_require__(43),
     isStrictComparable = __webpack_require__(76),
     matchesStrictComparable = __webpack_require__(77),
@@ -10148,10 +10307,10 @@ module.exports = baseMatchesProperty;
 
 
 /***/ }),
-/* 173 */
+/* 175 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoizeCapped = __webpack_require__(174);
+var memoizeCapped = __webpack_require__(176);
 
 /** Used to match property names within property paths. */
 var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
@@ -10181,10 +10340,10 @@ module.exports = stringToPath;
 
 
 /***/ }),
-/* 174 */
+/* 176 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var memoize = __webpack_require__(175);
+var memoize = __webpack_require__(177);
 
 /** Used as the maximum memoize cache size. */
 var MAX_MEMOIZE_SIZE = 500;
@@ -10213,7 +10372,7 @@ module.exports = memoizeCapped;
 
 
 /***/ }),
-/* 175 */
+/* 177 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var MapCache = __webpack_require__(33);
@@ -10292,11 +10451,11 @@ module.exports = memoize;
 
 
 /***/ }),
-/* 176 */
+/* 178 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseHasIn = __webpack_require__(177),
-    hasPath = __webpack_require__(178);
+var baseHasIn = __webpack_require__(179),
+    hasPath = __webpack_require__(180);
 
 /**
  * Checks if `path` is a direct or inherited property of `object`.
@@ -10332,7 +10491,7 @@ module.exports = hasIn;
 
 
 /***/ }),
-/* 177 */
+/* 179 */
 /***/ (function(module, exports) {
 
 /**
@@ -10351,7 +10510,7 @@ module.exports = baseHasIn;
 
 
 /***/ }),
-/* 178 */
+/* 180 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var castPath = __webpack_require__(24),
@@ -10396,11 +10555,11 @@ module.exports = hasPath;
 
 
 /***/ }),
-/* 179 */
+/* 181 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseProperty = __webpack_require__(81),
-    basePropertyDeep = __webpack_require__(180),
+    basePropertyDeep = __webpack_require__(182),
     isKey = __webpack_require__(43),
     toKey = __webpack_require__(12);
 
@@ -10434,7 +10593,7 @@ module.exports = property;
 
 
 /***/ }),
-/* 180 */
+/* 182 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(42);
@@ -10456,7 +10615,7 @@ module.exports = basePropertyDeep;
 
 
 /***/ }),
-/* 181 */
+/* 183 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseFindIndex = __webpack_require__(82),
@@ -10517,7 +10676,7 @@ module.exports = findIndex;
 
 
 /***/ }),
-/* 182 */
+/* 184 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var toNumber = __webpack_require__(46);
@@ -10565,117 +10724,43 @@ module.exports = toFinite;
 
 
 /***/ }),
-/* 183 */
+/* 185 */
 /***/ (function(module, exports) {
 
-/**
- * https://github.com/gre/bezier-easing
- * BezierEasing - use bezier curve for transition easing function
- * by Gaëtan Renaudeau 2014 - 2015 – MIT License
- */
-
-// These values are established by empiricism with tests (tradeoff: performance VS precision)
-var NEWTON_ITERATIONS = 4;
-var NEWTON_MIN_SLOPE = 0.001;
-var SUBDIVISION_PRECISION = 0.0000001;
-var SUBDIVISION_MAX_ITERATIONS = 10;
-
-var kSplineTableSize = 11;
-var kSampleStepSize = 1.0 / (kSplineTableSize - 1.0);
-
-var float32ArraySupported = typeof Float32Array === 'function';
-
-function A (aA1, aA2) { return 1.0 - 3.0 * aA2 + 3.0 * aA1; }
-function B (aA1, aA2) { return 3.0 * aA2 - 6.0 * aA1; }
-function C (aA1)      { return 3.0 * aA1; }
-
-// Returns x(t) given t, x1, and x2, or y(t) given t, y1, and y2.
-function calcBezier (aT, aA1, aA2) { return ((A(aA1, aA2) * aT + B(aA1, aA2)) * aT + C(aA1)) * aT; }
-
-// Returns dx/dt given t, x1, and x2, or dy/dt given t, y1, and y2.
-function getSlope (aT, aA1, aA2) { return 3.0 * A(aA1, aA2) * aT * aT + 2.0 * B(aA1, aA2) * aT + C(aA1); }
-
-function binarySubdivide (aX, aA, aB, mX1, mX2) {
-  var currentX, currentT, i = 0;
-  do {
-    currentT = aA + (aB - aA) / 2.0;
-    currentX = calcBezier(currentT, mX1, mX2) - aX;
-    if (currentX > 0.0) {
-      aB = currentT;
-    } else {
-      aA = currentT;
+function _arrayWithoutHoles(arr) {
+  if (Array.isArray(arr)) {
+    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
+      arr2[i] = arr[i];
     }
-  } while (Math.abs(currentX) > SUBDIVISION_PRECISION && ++i < SUBDIVISION_MAX_ITERATIONS);
-  return currentT;
+
+    return arr2;
+  }
 }
 
-function newtonRaphsonIterate (aX, aGuessT, mX1, mX2) {
- for (var i = 0; i < NEWTON_ITERATIONS; ++i) {
-   var currentSlope = getSlope(aGuessT, mX1, mX2);
-   if (currentSlope === 0.0) {
-     return aGuessT;
-   }
-   var currentX = calcBezier(aGuessT, mX1, mX2) - aX;
-   aGuessT -= currentX / currentSlope;
- }
- return aGuessT;
-}
-
-module.exports = function bezier (mX1, mY1, mX2, mY2) {
-  if (!(0 <= mX1 && mX1 <= 1 && 0 <= mX2 && mX2 <= 1)) {
-    throw new Error('bezier x values must be in [0, 1] range');
-  }
-
-  // Precompute samples table
-  var sampleValues = float32ArraySupported ? new Float32Array(kSplineTableSize) : new Array(kSplineTableSize);
-  if (mX1 !== mY1 || mX2 !== mY2) {
-    for (var i = 0; i < kSplineTableSize; ++i) {
-      sampleValues[i] = calcBezier(i * kSampleStepSize, mX1, mX2);
-    }
-  }
-
-  function getTForX (aX) {
-    var intervalStart = 0.0;
-    var currentSample = 1;
-    var lastSample = kSplineTableSize - 1;
-
-    for (; currentSample !== lastSample && sampleValues[currentSample] <= aX; ++currentSample) {
-      intervalStart += kSampleStepSize;
-    }
-    --currentSample;
-
-    // Interpolate to provide an initial guess for t
-    var dist = (aX - sampleValues[currentSample]) / (sampleValues[currentSample + 1] - sampleValues[currentSample]);
-    var guessForT = intervalStart + dist * kSampleStepSize;
-
-    var initialSlope = getSlope(guessForT, mX1, mX2);
-    if (initialSlope >= NEWTON_MIN_SLOPE) {
-      return newtonRaphsonIterate(aX, guessForT, mX1, mX2);
-    } else if (initialSlope === 0.0) {
-      return guessForT;
-    } else {
-      return binarySubdivide(aX, intervalStart, intervalStart + kSampleStepSize, mX1, mX2);
-    }
-  }
-
-  return function BezierEasing (x) {
-    if (mX1 === mY1 && mX2 === mY2) {
-      return x; // linear
-    }
-    // Because JavaScript number are imprecise, we should guarantee the extremes are right.
-    if (x === 0) {
-      return 0;
-    }
-    if (x === 1) {
-      return 1;
-    }
-    return calcBezier(getTForX(x), mY1, mY2);
-  };
-};
-
+module.exports = _arrayWithoutHoles;
 
 /***/ }),
-/* 184 */
+/* 186 */
+/***/ (function(module, exports) {
+
+function _iterableToArray(iter) {
+  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
+}
+
+module.exports = _iterableToArray;
+
+/***/ }),
+/* 187 */
+/***/ (function(module, exports) {
+
+function _nonIterableSpread() {
+  throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+module.exports = _nonIterableSpread;
+
+/***/ }),
+/* 188 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10692,7 +10777,7 @@ var _timm = __webpack_require__(13);
 
 var _IX2EngineConstants = __webpack_require__(48);
 
-var _IX2EngineActionTypes = __webpack_require__(85);
+var _IX2EngineActionTypes = __webpack_require__(87);
 
 var initialState = {};
 var refState = 'refState';
@@ -10782,7 +10867,118 @@ function pickUnits(actionItem) {
 }
 
 /***/ }),
-/* 185 */
+/* 189 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.IX2_EVENT_ENGINE_EVENT_TYPES = exports.DIRECTIONS = exports.EVENT_APPLIES_TO = exports.EVENT_ACTION_TYPES = exports.BASED_ON_TYPES = exports.AXES = void 0;
+var AXES = {
+  X_AXIS: 'X_AXIS',
+  Y_AXIS: 'Y_AXIS'
+};
+exports.AXES = AXES;
+var BASED_ON_TYPES = {
+  ELEMENT: 'ELEMENT',
+  VIEWPORT: 'VIEWPORT',
+  PAGE: 'PAGE'
+};
+exports.BASED_ON_TYPES = BASED_ON_TYPES;
+var EVENT_ACTION_TYPES = {
+  START: 'START',
+  STOP: 'STOP',
+  CONTINUOUS: 'CONTINUOUS',
+  CHANGE_COMBO: 'CHANGE_COMBO'
+};
+exports.EVENT_ACTION_TYPES = EVENT_ACTION_TYPES;
+var EVENT_APPLIES_TO = {
+  ELEMENT: 'ELEMENT',
+  CLASS: 'CLASS',
+  PAGE: 'PAGE'
+};
+exports.EVENT_APPLIES_TO = EVENT_APPLIES_TO;
+var DIRECTIONS = {
+  LEFT: 'LEFT',
+  RIGHT: 'RIGHT',
+  BOTTOM: 'BOTTOM',
+  TOP: 'TOP',
+  BOTTOM_LEFT: 'BOTTOM_LEFT',
+  BOTTOM_RIGHT: 'BOTTOM_RIGHT',
+  TOP_RIGHT: 'TOP_RIGHT',
+  TOP_LEFT: 'TOP_LEFT',
+  CLOCKWISE: 'CLOCKWISE',
+  COUNTER_CLOCKWISE: 'COUNTER_CLOCKWISE'
+};
+exports.DIRECTIONS = DIRECTIONS;
+var IX2_EVENT_ENGINE_EVENT_TYPES = {
+  MOUSE_CLICK: 'MOUSE_CLICK',
+  MOUSE_SECOND_CLICK: 'MOUSE_SECOND_CLICK',
+  MOUSE_DOWN: 'MOUSE_DOWN',
+  MOUSE_UP: 'MOUSE_UP',
+  MOUSE_OVER: 'MOUSE_OVER',
+  MOUSE_OUT: 'MOUSE_OUT',
+  MOUSE_MOVE: 'MOUSE_MOVE',
+  SCROLL_INTO_VIEW: 'SCROLL_INTO_VIEW',
+  SCROLL_OUT_OF_VIEW: 'SCROLL_OUT_OF_VIEW',
+  SCROLLING_IN_VIEW: 'SCROLLING_IN_VIEW',
+  TAB_ACTIVE: 'TAB_ACTIVE',
+  TAB_INACTIVE: 'TAB_INACTIVE',
+  NAVBAR_OPEN: 'NAVBAR_OPEN',
+  NAVBAR_CLOSE: 'NAVBAR_CLOSE',
+  SLIDER_ACTIVE: 'SLIDER_ACTIVE',
+  SLIDER_INACTIVE: 'SLIDER_INACTIVE',
+  DROPDOWN_OPEN: 'DROPDOWN_OPEN',
+  DROPDOWN_CLOSE: 'DROPDOWN_CLOSE',
+  COMPONENT_ACTIVE: 'COMPONENT_ACTIVE',
+  COMPONENT_INACTIVE: 'COMPONENT_INACTIVE',
+  PAGE_START: 'PAGE_START',
+  PAGE_FINISH: 'PAGE_FINISH',
+  PAGE_SCROLL_UP: 'PAGE_SCROLL_UP',
+  PAGE_SCROLL_DOWN: 'PAGE_SCROLL_DOWN',
+  PAGE_SCROLL: 'PAGE_SCROLL',
+  ELEMENT: 'ELEMENT',
+  VIEWPORT: 'VIEWPORT',
+  PAGE: 'PAGE',
+  ECOMMERCE_CART_OPEN: 'ECOMMERCE_CART_OPEN',
+  ECOMMERCE_CART_CLOSE: 'ECOMMERCE_CART_CLOSE'
+};
+exports.IX2_EVENT_ENGINE_EVENT_TYPES = IX2_EVENT_ENGINE_EVENT_TYPES;
+
+/***/ }),
+/* 190 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.IX2_INTERACTION_TYPES = void 0;
+var IX2_INTERACTION_TYPES = {
+  MOUSE_CLICK_INTERACTION: 'MOUSE_CLICK_INTERACTION',
+  MOUSE_HOVER_INTERACTION: 'MOUSE_HOVER_INTERACTION',
+  SCROLL_INTO_VIEW_INTERACTION: 'SCROLL_INTO_VIEW_INTERACTION',
+  PAGE_LOAD_INTERACTION: 'PAGE_LOAD_INTERACTION',
+  PAGE_SCROLLED_INTERACTION: 'PAGE_SCROLLED_INTERACTION',
+  MOUSE_MOVE_INTERACTION: 'MOUSE_MOVE_INTERACTION',
+  SCROLLING_IN_VIEW_INTERACTION: 'SCROLLING_IN_VIEW_INTERACTION',
+  MOUSE_MOVE_IN_VIEWPORT_INTERACTION: 'MOUSE_MOVE_IN_VIEWPORT_INTERACTION',
+  PAGE_IS_SCROLLING_INTERACTION: 'PAGE_IS_SCROLLING_INTERACTION',
+  DROPDOWN_INTERACTION: 'DROPDOWN_INTERACTION',
+  NAVBAR_INTERACTION: 'NAVBAR_INTERACTION',
+  TAB_INTERACTION: 'TAB_INTERACTION',
+  SLIDER_INTERACTION: 'SLIDER_INTERACTION',
+  ECOMMERCE_CART_INTERACTION: 'ECOMMERCE_CART_INTERACTION'
+};
+exports.IX2_INTERACTION_TYPES = IX2_INTERACTION_TYPES;
+
+/***/ }),
+/* 191 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10835,7 +11031,7 @@ exports.getPluginDestination = getPluginDestination;
 var createPluginInstance = function createPluginInstance(element) {
   var instance = window.Webflow.require('lottie').createInstance(element);
 
-  instance.pause();
+  instance.stop();
   instance.setSubframe(true);
   return instance;
 };
@@ -10848,7 +11044,7 @@ var renderPlugin = function renderPlugin(pluginInstance, refState, actionItem) {
   }
 
   var percent = refState[actionItem.actionTypeId].value / 100;
-  pluginInstance.setCurrentRawFrameValue(pluginInstance.totalFrames * percent);
+  pluginInstance.goToFrame(pluginInstance.frames * percent);
 };
 
 exports.renderPlugin = renderPlugin;
@@ -10862,7 +11058,7 @@ var clearPlugin = function clearPlugin(element) {
 exports.clearPlugin = clearPlugin;
 
 /***/ }),
-/* 186 */
+/* 192 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10904,25 +11100,25 @@ exports.mediaQueriesEqual = mediaQueriesEqual;
 exports.stringifyTarget = stringifyTarget;
 exports.getItemConfigByKey = void 0;
 
-var _defaultTo = _interopRequireDefault(__webpack_require__(187));
+var _defaultTo = _interopRequireDefault(__webpack_require__(193));
 
-var _reduce = _interopRequireDefault(__webpack_require__(188));
+var _reduce = _interopRequireDefault(__webpack_require__(194));
 
-var _findLast = _interopRequireDefault(__webpack_require__(194));
+var _findLast = _interopRequireDefault(__webpack_require__(200));
 
 var _get = _interopRequireDefault(__webpack_require__(23));
 
 var _timm = __webpack_require__(13);
 
-var _shallowEqual = _interopRequireDefault(__webpack_require__(90));
+var _shallowEqual = _interopRequireDefault(__webpack_require__(92));
 
-var _IX2EasingUtils = __webpack_require__(84);
+var _IX2EasingUtils = __webpack_require__(85);
 
-var _IX2VanillaPlugins = __webpack_require__(87);
+var _IX2VanillaPlugins = __webpack_require__(89);
 
 var _IX2EngineConstants = __webpack_require__(48);
 
-var _IX2EngineEventTypes = __webpack_require__(86);
+var _IX2EngineEventTypes = __webpack_require__(88);
 
 var _IX2EngineItemTypes = __webpack_require__(47);
 
@@ -12030,7 +12226,7 @@ function stringifyTarget(target) {
 }
 
 /***/ }),
-/* 187 */
+/* 193 */
 /***/ (function(module, exports) {
 
 /**
@@ -12061,13 +12257,13 @@ module.exports = defaultTo;
 
 
 /***/ }),
-/* 188 */
+/* 194 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayReduce = __webpack_require__(189),
-    baseEach = __webpack_require__(88),
+var arrayReduce = __webpack_require__(195),
+    baseEach = __webpack_require__(90),
     baseIteratee = __webpack_require__(5),
-    baseReduce = __webpack_require__(193),
+    baseReduce = __webpack_require__(199),
     isArray = __webpack_require__(1);
 
 /**
@@ -12118,7 +12314,7 @@ module.exports = reduce;
 
 
 /***/ }),
-/* 189 */
+/* 195 */
 /***/ (function(module, exports) {
 
 /**
@@ -12150,10 +12346,10 @@ module.exports = arrayReduce;
 
 
 /***/ }),
-/* 190 */
+/* 196 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createBaseFor = __webpack_require__(191);
+var createBaseFor = __webpack_require__(197);
 
 /**
  * The base implementation of `baseForOwn` which iterates over `object`
@@ -12172,7 +12368,7 @@ module.exports = baseFor;
 
 
 /***/ }),
-/* 191 */
+/* 197 */
 /***/ (function(module, exports) {
 
 /**
@@ -12203,7 +12399,7 @@ module.exports = createBaseFor;
 
 
 /***/ }),
-/* 192 */
+/* 198 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isArrayLike = __webpack_require__(9);
@@ -12241,7 +12437,7 @@ module.exports = createBaseEach;
 
 
 /***/ }),
-/* 193 */
+/* 199 */
 /***/ (function(module, exports) {
 
 /**
@@ -12270,11 +12466,11 @@ module.exports = baseReduce;
 
 
 /***/ }),
-/* 194 */
+/* 200 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var createFind = __webpack_require__(62),
-    findLastIndex = __webpack_require__(195);
+    findLastIndex = __webpack_require__(201);
 
 /**
  * This method is like `_.find` except that it iterates over elements of
@@ -12301,7 +12497,7 @@ module.exports = findLast;
 
 
 /***/ }),
-/* 195 */
+/* 201 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseFindIndex = __webpack_require__(82),
@@ -12366,7 +12562,7 @@ module.exports = findLastIndex;
 
 
 /***/ }),
-/* 196 */
+/* 202 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12437,7 +12633,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 197 */
+/* 203 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12498,7 +12694,7 @@ var ixRequest = function ixRequest() {
 exports.ixRequest = ixRequest;
 
 /***/ }),
-/* 198 */
+/* 204 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12634,7 +12830,7 @@ var ixSession = function ixSession() {
 exports.ixSession = ixSession;
 
 /***/ }),
-/* 199 */
+/* 205 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12660,7 +12856,8 @@ var _shared$IX2EngineActi = _shared.IX2EngineActionTypes,
     IX2_ANIMATION_FRAME_CHANGED = _shared$IX2EngineActi.IX2_ANIMATION_FRAME_CHANGED;
 var _shared$IX2EasingUtil = _shared.IX2EasingUtils,
     optimizeFloat = _shared$IX2EasingUtil.optimizeFloat,
-    applyEasing = _shared$IX2EasingUtil.applyEasing;
+    applyEasing = _shared$IX2EasingUtil.applyEasing,
+    createBezierEasing = _shared$IX2EasingUtil.createBezierEasing;
 var RENDER_GENERAL = _shared.IX2EngineConstants.RENDER_GENERAL;
 var _shared$IX2VanillaUti = _shared.IX2VanillaUtils,
     getItemConfigByKey = _shared$IX2VanillaUti.getItemConfigByKey,
@@ -12674,7 +12871,8 @@ var continuousInstance = function continuousInstance(state, action) {
       destinationKeys = state.destinationKeys,
       smoothing = state.smoothing,
       restingValue = state.restingValue,
-      actionTypeId = state.actionTypeId;
+      actionTypeId = state.actionTypeId,
+      customEasingFn = state.customEasingFn;
   var parameters = action.payload.parameters;
   var velocity = Math.max(1 - smoothing, 0.01);
   var paramValue = parameters[parameterId];
@@ -12730,7 +12928,7 @@ var continuousInstance = function continuousInstance(state, action) {
   } else if (fromActionItem && toActionItem) {
     var localPosition = (position - positionOffset) / positionRange;
     var easing = fromActionItem.config.easing;
-    var eased = applyEasing(easing, localPosition);
+    var eased = applyEasing(easing, localPosition, customEasingFn);
 
     for (var _i2 = 0, _length2 = destinationKeys.length; _i2 < _length2; _i2++) {
       var _key = destinationKeys[_i2];
@@ -12760,7 +12958,8 @@ var timedInstance = function timedInstance(state, action) {
       destination = _state.destination,
       destinationKeys = _state.destinationKeys,
       pluginDuration = _state.pluginDuration,
-      instanceDelay = _state.instanceDelay;
+      instanceDelay = _state.instanceDelay,
+      customEasingFn = _state.customEasingFn;
   var easing = actionItem.config.easing;
   var _actionItem$config = actionItem.config,
       duration = _actionItem$config.duration,
@@ -12795,7 +12994,7 @@ var timedInstance = function timedInstance(state, action) {
     }
 
     var position = optimizeFloat(Math.min(Math.max(0, delta / duration), 1));
-    var eased = applyEasing(easing, position);
+    var eased = applyEasing(easing, position, customEasingFn);
     var newProps = {};
     var current = null;
 
@@ -12869,6 +13068,7 @@ var ixInstances = function ixInstances() {
         var destinationKeys = Object.keys(destination).filter(function (key) {
           return destination[key] != null;
         });
+        var easing = actionItem.config.easing;
         return (0, _timm.set)(state, instanceId, {
           id: instanceId,
           elementId: elementId,
@@ -12898,7 +13098,8 @@ var ixInstances = function ixInstances() {
           restingValue: restingValue,
           pluginInstance: pluginInstance,
           pluginDuration: pluginDuration,
-          instanceDelay: instanceDelay
+          instanceDelay: instanceDelay,
+          customEasingFn: Array.isArray(easing) && easing.length === 4 ? createBezierEasing(easing) : undefined
         });
       }
 
@@ -12965,7 +13166,7 @@ var ixInstances = function ixInstances() {
 exports.ixInstances = ixInstances;
 
 /***/ }),
-/* 200 */
+/* 206 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13023,62 +13224,10 @@ var ixParameters = function ixParameters() {
 exports.ixParameters = ixParameters;
 
 /***/ }),
-/* 201 */
+/* 207 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayWithoutHoles = __webpack_require__(202);
-
-var iterableToArray = __webpack_require__(203);
-
-var nonIterableSpread = __webpack_require__(204);
-
-function _toConsumableArray(arr) {
-  return arrayWithoutHoles(arr) || iterableToArray(arr) || nonIterableSpread();
-}
-
-module.exports = _toConsumableArray;
-
-/***/ }),
-/* 202 */
-/***/ (function(module, exports) {
-
-function _arrayWithoutHoles(arr) {
-  if (Array.isArray(arr)) {
-    for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) {
-      arr2[i] = arr[i];
-    }
-
-    return arr2;
-  }
-}
-
-module.exports = _arrayWithoutHoles;
-
-/***/ }),
-/* 203 */
-/***/ (function(module, exports) {
-
-function _iterableToArray(iter) {
-  if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
-}
-
-module.exports = _iterableToArray;
-
-/***/ }),
-/* 204 */
-/***/ (function(module, exports) {
-
-function _nonIterableSpread() {
-  throw new TypeError("Invalid attempt to spread non-iterable instance");
-}
-
-module.exports = _nonIterableSpread;
-
-/***/ }),
-/* 205 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var objectWithoutPropertiesLoose = __webpack_require__(206);
+var objectWithoutPropertiesLoose = __webpack_require__(208);
 
 function _objectWithoutProperties(source, excluded) {
   if (source == null) return {};
@@ -13102,7 +13251,7 @@ function _objectWithoutProperties(source, excluded) {
 module.exports = _objectWithoutProperties;
 
 /***/ }),
-/* 206 */
+/* 208 */
 /***/ (function(module, exports) {
 
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -13123,14 +13272,14 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 module.exports = _objectWithoutPropertiesLoose;
 
 /***/ }),
-/* 207 */
+/* 209 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseKeys = __webpack_require__(39),
     getTag = __webpack_require__(41),
     isArrayLike = __webpack_require__(9),
-    isString = __webpack_require__(208),
-    stringSize = __webpack_require__(209);
+    isString = __webpack_require__(210),
+    stringSize = __webpack_require__(211);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -13175,7 +13324,7 @@ module.exports = size;
 
 
 /***/ }),
-/* 208 */
+/* 210 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(8),
@@ -13211,12 +13360,12 @@ module.exports = isString;
 
 
 /***/ }),
-/* 209 */
+/* 211 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var asciiSize = __webpack_require__(210),
-    hasUnicode = __webpack_require__(211),
-    unicodeSize = __webpack_require__(212);
+var asciiSize = __webpack_require__(212),
+    hasUnicode = __webpack_require__(213),
+    unicodeSize = __webpack_require__(214);
 
 /**
  * Gets the number of symbols in `string`.
@@ -13235,7 +13384,7 @@ module.exports = stringSize;
 
 
 /***/ }),
-/* 210 */
+/* 212 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseProperty = __webpack_require__(81);
@@ -13253,7 +13402,7 @@ module.exports = asciiSize;
 
 
 /***/ }),
-/* 211 */
+/* 213 */
 /***/ (function(module, exports) {
 
 /** Used to compose unicode character classes. */
@@ -13285,7 +13434,7 @@ module.exports = hasUnicode;
 
 
 /***/ }),
-/* 212 */
+/* 214 */
 /***/ (function(module, exports) {
 
 /** Used to compose unicode character classes. */
@@ -13335,12 +13484,12 @@ module.exports = unicodeSize;
 
 
 /***/ }),
-/* 213 */
+/* 215 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIteratee = __webpack_require__(5),
-    negate = __webpack_require__(214),
-    pickBy = __webpack_require__(215);
+    negate = __webpack_require__(216),
+    pickBy = __webpack_require__(217);
 
 /**
  * The opposite of `_.pickBy`; this method creates an object composed of
@@ -13370,7 +13519,7 @@ module.exports = omitBy;
 
 
 /***/ }),
-/* 214 */
+/* 216 */
 /***/ (function(module, exports) {
 
 /** Error message constants. */
@@ -13416,13 +13565,13 @@ module.exports = negate;
 
 
 /***/ }),
-/* 215 */
+/* 217 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(80),
     baseIteratee = __webpack_require__(5),
-    basePickBy = __webpack_require__(216),
-    getAllKeysIn = __webpack_require__(219);
+    basePickBy = __webpack_require__(218),
+    getAllKeysIn = __webpack_require__(221);
 
 /**
  * Creates an object composed of the `object` properties `predicate` returns
@@ -13459,11 +13608,11 @@ module.exports = pickBy;
 
 
 /***/ }),
-/* 216 */
+/* 218 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGet = __webpack_require__(42),
-    baseSet = __webpack_require__(217),
+    baseSet = __webpack_require__(219),
     castPath = __webpack_require__(24);
 
 /**
@@ -13495,10 +13644,10 @@ module.exports = basePickBy;
 
 
 /***/ }),
-/* 217 */
+/* 219 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assignValue = __webpack_require__(218),
+var assignValue = __webpack_require__(220),
     castPath = __webpack_require__(24),
     isIndex = __webpack_require__(36),
     isObject = __webpack_require__(4),
@@ -13548,10 +13697,10 @@ module.exports = baseSet;
 
 
 /***/ }),
-/* 218 */
+/* 220 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(92),
+var baseAssignValue = __webpack_require__(94),
     eq = __webpack_require__(31);
 
 /** Used for built-in method references. */
@@ -13582,12 +13731,12 @@ module.exports = assignValue;
 
 
 /***/ }),
-/* 219 */
+/* 221 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetAllKeys = __webpack_require__(69),
-    getSymbolsIn = __webpack_require__(220),
-    keysIn = __webpack_require__(222);
+    getSymbolsIn = __webpack_require__(222),
+    keysIn = __webpack_require__(224);
 
 /**
  * Creates an array of own and inherited enumerable property names and
@@ -13605,11 +13754,11 @@ module.exports = getAllKeysIn;
 
 
 /***/ }),
-/* 220 */
+/* 222 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(34),
-    getPrototype = __webpack_require__(221),
+    getPrototype = __webpack_require__(223),
     getSymbols = __webpack_require__(70),
     stubArray = __webpack_require__(71);
 
@@ -13636,7 +13785,7 @@ module.exports = getSymbolsIn;
 
 
 /***/ }),
-/* 221 */
+/* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var overArg = __webpack_require__(74);
@@ -13648,11 +13797,11 @@ module.exports = getPrototype;
 
 
 /***/ }),
-/* 222 */
+/* 224 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayLikeKeys = __webpack_require__(72),
-    baseKeysIn = __webpack_require__(223),
+    baseKeysIn = __webpack_require__(225),
     isArrayLike = __webpack_require__(9);
 
 /**
@@ -13686,12 +13835,12 @@ module.exports = keysIn;
 
 
 /***/ }),
-/* 223 */
+/* 225 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(4),
     isPrototype = __webpack_require__(40),
-    nativeKeysIn = __webpack_require__(224);
+    nativeKeysIn = __webpack_require__(226);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -13725,7 +13874,7 @@ module.exports = baseKeysIn;
 
 
 /***/ }),
-/* 224 */
+/* 226 */
 /***/ (function(module, exports) {
 
 /**
@@ -13751,7 +13900,7 @@ module.exports = nativeKeysIn;
 
 
 /***/ }),
-/* 225 */
+/* 227 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseKeys = __webpack_require__(39),
@@ -13834,11 +13983,11 @@ module.exports = isEmpty;
 
 
 /***/ }),
-/* 226 */
+/* 228 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(92),
-    baseForOwn = __webpack_require__(89),
+var baseAssignValue = __webpack_require__(94),
+    baseForOwn = __webpack_require__(91),
     baseIteratee = __webpack_require__(5);
 
 /**
@@ -13883,12 +14032,12 @@ module.exports = mapValues;
 
 
 /***/ }),
-/* 227 */
+/* 229 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayEach = __webpack_require__(228),
-    baseEach = __webpack_require__(88),
-    castFunction = __webpack_require__(229),
+var arrayEach = __webpack_require__(230),
+    baseEach = __webpack_require__(90),
+    castFunction = __webpack_require__(231),
     isArray = __webpack_require__(1);
 
 /**
@@ -13930,7 +14079,7 @@ module.exports = forEach;
 
 
 /***/ }),
-/* 228 */
+/* 230 */
 /***/ (function(module, exports) {
 
 /**
@@ -13958,7 +14107,7 @@ module.exports = arrayEach;
 
 
 /***/ }),
-/* 229 */
+/* 231 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var identity = __webpack_require__(44);
@@ -13978,10 +14127,10 @@ module.exports = castFunction;
 
 
 /***/ }),
-/* 230 */
+/* 232 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClamp = __webpack_require__(94),
+var baseClamp = __webpack_require__(96),
     baseToString = __webpack_require__(79),
     toInteger = __webpack_require__(45),
     toString = __webpack_require__(78);
@@ -14027,10 +14176,10 @@ module.exports = endsWith;
 
 
 /***/ }),
-/* 231 */
+/* 233 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var debounce = __webpack_require__(232),
+var debounce = __webpack_require__(234),
     isObject = __webpack_require__(4);
 
 /** Error message constants. */
@@ -14102,11 +14251,11 @@ module.exports = throttle;
 
 
 /***/ }),
-/* 232 */
+/* 234 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(4),
-    now = __webpack_require__(233),
+    now = __webpack_require__(235),
     toNumber = __webpack_require__(46);
 
 /** Error message constants. */
@@ -14299,7 +14448,7 @@ module.exports = debounce;
 
 
 /***/ }),
-/* 233 */
+/* 235 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(3);
@@ -14328,7 +14477,7 @@ module.exports = now;
 
 
 /***/ }),
-/* 234 */
+/* 236 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14512,7 +14661,7 @@ function getRefType(ref) {
 }
 
 /***/ }),
-/* 235 */
+/* 237 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14535,13 +14684,13 @@ exports["default"] = void 0;
 
 var _objectSpread2 = _interopRequireDefault(__webpack_require__(26));
 
-var _flow = _interopRequireDefault(__webpack_require__(236));
+var _flow = _interopRequireDefault(__webpack_require__(238));
 
 var _get = _interopRequireDefault(__webpack_require__(23));
 
-var _clamp = _interopRequireDefault(__webpack_require__(255));
+var _clamp = _interopRequireDefault(__webpack_require__(257));
 
-var _IX2VanillaEngine = __webpack_require__(91);
+var _IX2VanillaEngine = __webpack_require__(93);
 
 var _IX2EngineActions = __webpack_require__(49);
 
@@ -14680,7 +14829,7 @@ var baseActionGroupOptions = {
 var baseActivityActionGroupOptions = (0, _objectSpread2["default"])({}, baseActionGroupOptions, {
   types: [COMPONENT_ACTIVE, COMPONENT_INACTIVE].join(' ')
 });
-var CONTINUOUS_SCROLL_EVENT_TYPES = [{
+var SCROLL_EVENT_TYPES = [{
   target: window,
   types: 'resize orientationchange',
   throttle: true
@@ -14689,14 +14838,9 @@ var CONTINUOUS_SCROLL_EVENT_TYPES = [{
   types: 'scroll wheel readystatechange IX2_PAGE_UPDATE',
   throttle: true
 }];
-var TRIGGERED_SCROLL_EVENT_TYPES = [{
-  target: document,
-  types: 'scroll wheel',
-  throttle: true
-}];
 var MOUSE_OVER_OUT_TYPES = 'mouseover mouseout';
 var baseScrollActionGroupOptions = {
-  types: TRIGGERED_SCROLL_EVENT_TYPES
+  types: SCROLL_EVENT_TYPES
 };
 var AUTO_STOP_DISABLED_EVENTS = {
   PAGE_START: PAGE_START,
@@ -15108,7 +15252,7 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
     };
   }
 }), (0, _defineProperty2["default"])(_default2, PAGE_SCROLL, {
-  types: CONTINUOUS_SCROLL_EVENT_TYPES,
+  types: SCROLL_EVENT_TYPES,
   handler: function handler(_ref9) {
     var store = _ref9.store,
         eventConfig = _ref9.eventConfig;
@@ -15125,7 +15269,7 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
     store.dispatch((0, _IX2EngineActions.parameterChanged)(continuousParameterGroupId, value));
   }
 }), (0, _defineProperty2["default"])(_default2, SCROLLING_IN_VIEW, {
-  types: CONTINUOUS_SCROLL_EVENT_TYPES,
+  types: SCROLL_EVENT_TYPES,
   handler: function handler(_ref10) {
     var element = _ref10.element,
         store = _ref10.store,
@@ -15212,10 +15356,10 @@ var _default = (_default2 = {}, (0, _defineProperty2["default"])(_default2, SLID
 exports["default"] = _default;
 
 /***/ }),
-/* 236 */
+/* 238 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var createFlow = __webpack_require__(237);
+var createFlow = __webpack_require__(239);
 
 /**
  * Creates a function that returns the result of invoking the given functions
@@ -15245,15 +15389,15 @@ module.exports = flow;
 
 
 /***/ }),
-/* 237 */
+/* 239 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var LodashWrapper = __webpack_require__(50),
-    flatRest = __webpack_require__(238),
-    getData = __webpack_require__(96),
-    getFuncName = __webpack_require__(97),
+    flatRest = __webpack_require__(240),
+    getData = __webpack_require__(98),
+    getFuncName = __webpack_require__(99),
     isArray = __webpack_require__(1),
-    isLaziable = __webpack_require__(251);
+    isLaziable = __webpack_require__(253);
 
 /** Error message constants. */
 var FUNC_ERROR_TEXT = 'Expected a function';
@@ -15329,12 +15473,12 @@ module.exports = createFlow;
 
 
 /***/ }),
-/* 238 */
+/* 240 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var flatten = __webpack_require__(239),
-    overRest = __webpack_require__(242),
-    setToString = __webpack_require__(244);
+var flatten = __webpack_require__(241),
+    overRest = __webpack_require__(244),
+    setToString = __webpack_require__(246);
 
 /**
  * A specialized version of `baseRest` which flattens the rest array.
@@ -15351,10 +15495,10 @@ module.exports = flatRest;
 
 
 /***/ }),
-/* 239 */
+/* 241 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseFlatten = __webpack_require__(240);
+var baseFlatten = __webpack_require__(242);
 
 /**
  * Flattens `array` a single level deep.
@@ -15379,11 +15523,11 @@ module.exports = flatten;
 
 
 /***/ }),
-/* 240 */
+/* 242 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(34),
-    isFlattenable = __webpack_require__(241);
+    isFlattenable = __webpack_require__(243);
 
 /**
  * The base implementation of `_.flatten` with support for restricting flattening.
@@ -15423,7 +15567,7 @@ module.exports = baseFlatten;
 
 
 /***/ }),
-/* 241 */
+/* 243 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(11),
@@ -15449,10 +15593,10 @@ module.exports = isFlattenable;
 
 
 /***/ }),
-/* 242 */
+/* 244 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var apply = __webpack_require__(243);
+var apply = __webpack_require__(245);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeMax = Math.max;
@@ -15491,7 +15635,7 @@ module.exports = overRest;
 
 
 /***/ }),
-/* 243 */
+/* 245 */
 /***/ (function(module, exports) {
 
 /**
@@ -15518,11 +15662,11 @@ module.exports = apply;
 
 
 /***/ }),
-/* 244 */
+/* 246 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseSetToString = __webpack_require__(245),
-    shortOut = __webpack_require__(247);
+var baseSetToString = __webpack_require__(247),
+    shortOut = __webpack_require__(249);
 
 /**
  * Sets the `toString` method of `func` to return `string`.
@@ -15538,11 +15682,11 @@ module.exports = setToString;
 
 
 /***/ }),
-/* 245 */
+/* 247 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var constant = __webpack_require__(246),
-    defineProperty = __webpack_require__(93),
+var constant = __webpack_require__(248),
+    defineProperty = __webpack_require__(95),
     identity = __webpack_require__(44);
 
 /**
@@ -15566,7 +15710,7 @@ module.exports = baseSetToString;
 
 
 /***/ }),
-/* 246 */
+/* 248 */
 /***/ (function(module, exports) {
 
 /**
@@ -15598,7 +15742,7 @@ module.exports = constant;
 
 
 /***/ }),
-/* 247 */
+/* 249 */
 /***/ (function(module, exports) {
 
 /** Used to detect hot functions by number of calls within a span of milliseconds. */
@@ -15641,7 +15785,7 @@ module.exports = shortOut;
 
 
 /***/ }),
-/* 248 */
+/* 250 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var WeakMap = __webpack_require__(75);
@@ -15653,7 +15797,7 @@ module.exports = metaMap;
 
 
 /***/ }),
-/* 249 */
+/* 251 */
 /***/ (function(module, exports) {
 
 /**
@@ -15676,7 +15820,7 @@ module.exports = noop;
 
 
 /***/ }),
-/* 250 */
+/* 252 */
 /***/ (function(module, exports) {
 
 /** Used to lookup unminified function names. */
@@ -15686,13 +15830,13 @@ module.exports = realNames;
 
 
 /***/ }),
-/* 251 */
+/* 253 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var LazyWrapper = __webpack_require__(52),
-    getData = __webpack_require__(96),
-    getFuncName = __webpack_require__(97),
-    lodash = __webpack_require__(252);
+    getData = __webpack_require__(98),
+    getFuncName = __webpack_require__(99),
+    lodash = __webpack_require__(254);
 
 /**
  * Checks if `func` has a lazy counterpart.
@@ -15720,7 +15864,7 @@ module.exports = isLaziable;
 
 
 /***/ }),
-/* 252 */
+/* 254 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var LazyWrapper = __webpack_require__(52),
@@ -15728,7 +15872,7 @@ var LazyWrapper = __webpack_require__(52),
     baseLodash = __webpack_require__(51),
     isArray = __webpack_require__(1),
     isObjectLike = __webpack_require__(7),
-    wrapperClone = __webpack_require__(253);
+    wrapperClone = __webpack_require__(255);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -15873,12 +16017,12 @@ module.exports = lodash;
 
 
 /***/ }),
-/* 253 */
+/* 255 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var LazyWrapper = __webpack_require__(52),
     LodashWrapper = __webpack_require__(50),
-    copyArray = __webpack_require__(254);
+    copyArray = __webpack_require__(256);
 
 /**
  * Creates a clone of `wrapper`.
@@ -15902,7 +16046,7 @@ module.exports = wrapperClone;
 
 
 /***/ }),
-/* 254 */
+/* 256 */
 /***/ (function(module, exports) {
 
 /**
@@ -15928,10 +16072,10 @@ module.exports = copyArray;
 
 
 /***/ }),
-/* 255 */
+/* 257 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseClamp = __webpack_require__(94),
+var baseClamp = __webpack_require__(96),
     toNumber = __webpack_require__(46);
 
 /**
@@ -15973,7 +16117,7 @@ module.exports = clamp;
 
 
 /***/ }),
-/* 256 */
+/* 258 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16103,7 +16247,7 @@ Webflow.define('links', module.exports = function ($, _) {
 });
 
 /***/ }),
-/* 257 */
+/* 259 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16270,7 +16414,7 @@ Webflow.define('scroll', module.exports = function ($) {
 });
 
 /***/ }),
-/* 258 */
+/* 260 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -16436,5 +16580,5 @@ Webflow.define('touch', module.exports = function ($) {
  * Webflow: Interactions 2.0: Init
  */
 Webflow.require('ix2').init(
-{"events":{"e-30":{"id":"e-30","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"POP_EFFECT","config":{"actionListId":"pop","autoStopEventId":"e-31"},"instant":false},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4b7"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":0,"direction":null,"effectIn":null},"createdOn":1555106720900},"e-48":{"id":"e-48","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-49"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c0"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113271941},"e-49":{"id":"e-49","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-48"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c0"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113271942},"e-50":{"id":"e-50","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-51"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c2"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113327537},"e-51":{"id":"e-51","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-50"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c2"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113327538},"e-52":{"id":"e-52","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-53"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a6"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113340363},"e-53":{"id":"e-53","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-52"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a6"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113340363},"e-54":{"id":"e-54","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-55"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a8"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113351428},"e-55":{"id":"e-55","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-54"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a8"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113351428},"e-60":{"id":"e-60","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-3","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".main","originalId":"5cafd0175705490444182aee|4aed8ff7-6819-1261-11c4-016ab98be632","appliesTo":"CLASS"},"config":[{"continuousParameterGroupId":"a-3-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":50,"restingState":50},{"continuousParameterGroupId":"a-3-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":50,"restingState":50}],"createdOn":1555113875423},"e-68":{"id":"e-68","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-3","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|bd2517d3-e253-2d85-ace1-686c752778f9"},"config":[{"continuousParameterGroupId":"a-3-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":50,"restingState":50},{"continuousParameterGroupId":"a-3-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":50,"restingState":50}],"createdOn":1555116143013},"e-71":{"id":"e-71","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"POP_EFFECT","config":{"actionListId":"pop","autoStopEventId":"e-72"},"instant":false},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|bd2517d3-e253-2d85-ace1-686c75277906"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":0,"direction":null,"effectIn":null},"createdOn":1555116143013},"e-73":{"id":"e-73","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-74"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|bd2517d3-e253-2d85-ace1-686c7527790f"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555116143013},"e-74":{"id":"e-74","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-73"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|bd2517d3-e253-2d85-ace1-686c7527790f"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555116143013},"e-91":{"id":"e-91","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","config":{"actionListId":"slideInBottom","autoStopEventId":"e-92"},"instant":false},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|15a520c4-645c-4f34-4ef7-8fbc2324a735"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":12,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1555124457331},"e-97":{"id":"e-97","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-24","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-98"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c0"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555130580799},"e-110":{"id":"e-110","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-24","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-111"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a6"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555177020627},"e-112":{"id":"e-112","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-15","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-113"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".overlay-link","originalId":"5cb152bf2edee054f37e7b32|7ef778fe-1006-902f-df12-ccc9b2f31f0a","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555177903220},"e-113":{"id":"e-113","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-16","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-112"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".overlay-link","originalId":"5cb152bf2edee054f37e7b32|7ef778fe-1006-902f-df12-ccc9b2f31f0a","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555177903221},"e-114":{"id":"e-114","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-115"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".overlay-darkmode","originalId":"5cb15a772da2adbf5c52b549|59f8ea71-0f96-448d-9ef0-a6b4bbd0b001","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555178290879},"e-115":{"id":"e-115","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-114"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".overlay-darkmode","originalId":"5cb15a772da2adbf5c52b549|59f8ea71-0f96-448d-9ef0-a6b4bbd0b001","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555178290880},"e-116":{"id":"e-116","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"POP_EFFECT","config":{"actionListId":"pop","autoStopEventId":"e-117"},"instant":false},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6e8"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":0,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-118":{"id":"e-118","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-119"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f2"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-119":{"id":"e-119","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-118"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f2"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-120":{"id":"e-120","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-121"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f4"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-121":{"id":"e-121","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-120"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f4"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-122":{"id":"e-122","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-24","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-123"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f4"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759}},"actionLists":{"a-17":{"id":"a-17","title":"button-hover-in","actionItemGroups":[{"actionItems":[{"id":"a-17-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"easeIn","duration":100,"target":{"useEventTarget":"PARENT","selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"xValue":1.1,"yValue":1.1,"locked":true}}]}],"createdOn":1555113275035,"useFirstGroupAsInitialState":false},"a-18":{"id":"a-18","title":"button-hover-out","actionItemGroups":[{"actionItems":[{"id":"a-18-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"easeIn","duration":100,"target":{"useEventTarget":"PARENT","selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"xValue":1,"yValue":1,"locked":true}}]}],"createdOn":1555113275035,"useFirstGroupAsInitialState":false},"a-3":{"id":"a-3","title":"mockups","continuousParameterGroups":[{"id":"a-3-p","type":"MOUSE_X","parameterLabel":"Mouse X","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-3-n","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c4"},"yValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-5","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6aa"},"yValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-19","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|9440a272-09f4-4df0-99ac-10a71265a1e6"},"yValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-20","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|50836dbd-b856-74ba-35c2-e3caa5f766e5"},"yValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]},{"keyframe":100,"actionItems":[{"id":"a-3-n-2","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c4"},"yValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-6","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6aa"},"yValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-21","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|9440a272-09f4-4df0-99ac-10a71265a1e6"},"yValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-22","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|50836dbd-b856-74ba-35c2-e3caa5f766e5"},"yValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]}]},{"id":"a-3-p-2","type":"MOUSE_Y","parameterLabel":"Mouse Y","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-3-n-3","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c4"},"xValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-7","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6aa"},"xValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-15","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|9440a272-09f4-4df0-99ac-10a71265a1e6"},"xValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-16","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|50836dbd-b856-74ba-35c2-e3caa5f766e5"},"xValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]},{"keyframe":100,"actionItems":[{"id":"a-3-n-4","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c4"},"xValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-8","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6aa"},"xValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-17","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|9440a272-09f4-4df0-99ac-10a71265a1e6"},"xValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-18","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|50836dbd-b856-74ba-35c2-e3caa5f766e5"},"xValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]}]}],"createdOn":1555035142163},"a-24":{"id":"a-24","title":"main-out","actionItemGroups":[{"actionItems":[{"id":"a-24-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":400,"target":{"selector":".main","selectorGuids":["c663a145-06fb-1f7a-34b6-f639c4e00be1"]},"xValue":-5,"xUnit":"VW","yUnit":"PX","zUnit":"PX"}},{"id":"a-24-n-4","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":400,"target":{"selector":".main","selectorGuids":["c663a145-06fb-1f7a-34b6-f639c4e00be1"]},"value":1,"unit":""}}]}],"createdOn":1555176818134,"useFirstGroupAsInitialState":false},"a-15":{"id":"a-15","title":"social-hover-in","actionItemGroups":[{"actionItems":[{"id":"a-15-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"easeOut","duration":200,"locked":false,"target":{"useEventTarget":"SIBLINGS","selector":".social-underline","selectorGuids":["735cffc4-b282-a0ec-fa46-00d5692340ab"]},"widthValue":100,"widthUnit":"%","heightUnit":"PX"}}]}],"createdOn":1555113058945,"useFirstGroupAsInitialState":false},"a-16":{"id":"a-16","title":"social-hover-out","actionItemGroups":[{"actionItems":[{"id":"a-16-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"easeOut","duration":200,"locked":false,"target":{"useEventTarget":"SIBLINGS","selector":".social-underline","selectorGuids":["735cffc4-b282-a0ec-fa46-00d5692340ab"]},"widthValue":0,"widthUnit":"%","heightUnit":"PX"}}]}],"createdOn":1555113058945,"useFirstGroupAsInitialState":false},"a-4":{"id":"a-4","title":"dark-mode","actionItemGroups":[{"actionItems":[{"id":"a-4-n","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.moon","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","672ec9bd-d33f-c266-19b1-5aaf23775f74"]},"zValue":720,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-4-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.moon","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","672ec9bd-d33f-c266-19b1-5aaf23775f74"]},"value":0,"unit":""}},{"id":"a-4-n-5","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".body","selectorGuids":["dc38890a-ec18-4baa-7f5e-a0a0e5a18736"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-4-n-6","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".body","selectorGuids":["dc38890a-ec18-4baa-7f5e-a0a0e5a18736"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-7","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".overlay-link","selectorGuids":["a9306f26-0d49-bbd6-b530-7935383c12b6"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-8","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".overlay-divider","selectorGuids":["4aa8f8fc-c03e-6953-e771-7dbcc9bb1fa9"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-13","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".social-underline","selectorGuids":["735cffc4-b282-a0ec-fa46-00d5692340ab"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-9","actionTypeId":"STYLE_BORDER","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-10","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-12","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":200,"globalSwatchId":"20899c2d","target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-4-n-14","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-15","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-4","actionTypeId":"STYLE_OPACITY","config":{"delay":300,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.sun","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","92d7a1d8-71bd-1ee5-2be3-21f5f79b687f"]},"value":1,"unit":""}},{"id":"a-4-n-3","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":300,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.sun","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","92d7a1d8-71bd-1ee5-2be3-21f5f79b687f"]},"zValue":720,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]}],"createdOn":1555040648858,"useFirstGroupAsInitialState":false},"a-5":{"id":"a-5","title":"light-mode","actionItemGroups":[{"actionItems":[{"id":"a-5-n-3","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".body","selectorGuids":["dc38890a-ec18-4baa-7f5e-a0a0e5a18736"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-5-n-4","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".body","selectorGuids":["dc38890a-ec18-4baa-7f5e-a0a0e5a18736"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-5","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".overlay-link","selectorGuids":["a9306f26-0d49-bbd6-b530-7935383c12b6"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-6","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".overlay-divider","selectorGuids":["4aa8f8fc-c03e-6953-e771-7dbcc9bb1fa9"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-13","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".social-underline","selectorGuids":["735cffc4-b282-a0ec-fa46-00d5692340ab"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-14","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-15","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-7","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.sun","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","92d7a1d8-71bd-1ee5-2be3-21f5f79b687f"]},"value":0,"unit":""}},{"id":"a-5-n-8","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.sun","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","92d7a1d8-71bd-1ee5-2be3-21f5f79b687f"]},"zValue":0,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-5-n-9","actionTypeId":"STYLE_BORDER","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-12","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":200,"target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-5-n-10","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":300,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.moon","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","672ec9bd-d33f-c266-19b1-5aaf23775f74"]},"value":1,"unit":""}},{"id":"a-5-n","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":300,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.moon","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","672ec9bd-d33f-c266-19b1-5aaf23775f74"]},"zValue":0,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]}],"createdOn":1555040648858,"useFirstGroupAsInitialState":false},"pop":{"id":"pop","actionItemGroups":[{"actionItems":[{"actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuart","duration":250,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0.7500000000000001,"yValue":0.7500000000000001}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outElastic","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":1,"yValue":1}}]}]},"slideInBottom":{"id":"slideInBottom","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":100,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}},{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}}]}]}},"site":{"mediaQueries":[{"key":"main","min":992,"max":10000},{"key":"medium","min":768,"max":991},{"key":"small","min":480,"max":767},{"key":"tiny","min":0,"max":479}]}}
+{"events":{"e-30":{"id":"e-30","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"POP_EFFECT","config":{"actionListId":"pop","autoStopEventId":"e-31"},"instant":false},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4b7"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":0,"direction":null,"effectIn":null},"createdOn":1555106720900},"e-48":{"id":"e-48","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-49"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c0"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113271941},"e-49":{"id":"e-49","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-48"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c0"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113271942},"e-50":{"id":"e-50","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-51"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c2"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113327537},"e-51":{"id":"e-51","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-50"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c2"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113327538},"e-52":{"id":"e-52","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-53"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a6"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113340363},"e-53":{"id":"e-53","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-52"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a6"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113340363},"e-54":{"id":"e-54","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-55"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a8"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113351428},"e-55":{"id":"e-55","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-54"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a8"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555113351428},"e-60":{"id":"e-60","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-3","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".main","originalId":"5cafd0175705490444182aee|4aed8ff7-6819-1261-11c4-016ab98be632","appliesTo":"CLASS"},"config":[{"continuousParameterGroupId":"a-3-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":50,"restingState":50},{"continuousParameterGroupId":"a-3-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":50,"restingState":50}],"createdOn":1555113875423},"e-68":{"id":"e-68","eventTypeId":"MOUSE_MOVE","action":{"id":"","actionTypeId":"GENERAL_CONTINUOUS_ACTION","config":{"actionListId":"a-3","affectedElements":{},"duration":0}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|bd2517d3-e253-2d85-ace1-686c752778f9"},"config":[{"continuousParameterGroupId":"a-3-p","selectedAxis":"X_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":50,"restingState":50},{"continuousParameterGroupId":"a-3-p-2","selectedAxis":"Y_AXIS","basedOn":"ELEMENT","reverse":false,"smoothing":50,"restingState":50}],"createdOn":1555116143013},"e-71":{"id":"e-71","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"POP_EFFECT","config":{"actionListId":"pop","autoStopEventId":"e-72"},"instant":false},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|bd2517d3-e253-2d85-ace1-686c75277906"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":0,"direction":null,"effectIn":null},"createdOn":1555116143013},"e-73":{"id":"e-73","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-74"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|bd2517d3-e253-2d85-ace1-686c7527790f"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555116143013},"e-74":{"id":"e-74","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-73"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|bd2517d3-e253-2d85-ace1-686c7527790f"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555116143013},"e-91":{"id":"e-91","eventTypeId":"SCROLL_INTO_VIEW","action":{"id":"","actionTypeId":"SLIDE_EFFECT","config":{"actionListId":"slideInBottom","autoStopEventId":"e-92"},"instant":false},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cb12e792edee048877e164a|15a520c4-645c-4f34-4ef7-8fbc2324a735"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":12,"scrollOffsetUnit":"%","delay":0,"direction":"BOTTOM","effectIn":true},"createdOn":1555124457331},"e-97":{"id":"e-97","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-24","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-98"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c0"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555130580799},"e-110":{"id":"e-110","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-24","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-111"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6a6"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555177020627},"e-112":{"id":"e-112","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-15","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-113"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".overlay-link","originalId":"5cb152bf2edee054f37e7b32|7ef778fe-1006-902f-df12-ccc9b2f31f0a","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555177903220},"e-113":{"id":"e-113","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-16","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-112"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".overlay-link","originalId":"5cb152bf2edee054f37e7b32|7ef778fe-1006-902f-df12-ccc9b2f31f0a","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555177903221},"e-114":{"id":"e-114","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-4","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-115"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".overlay-darkmode","originalId":"5cb15a772da2adbf5c52b549|59f8ea71-0f96-448d-9ef0-a6b4bbd0b001","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555178290879},"e-115":{"id":"e-115","eventTypeId":"MOUSE_SECOND_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-5","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-114"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".overlay-darkmode","originalId":"5cb15a772da2adbf5c52b549|59f8ea71-0f96-448d-9ef0-a6b4bbd0b001","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1555178290880},"e-116":{"id":"e-116","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"POP_EFFECT","config":{"actionListId":"pop","autoStopEventId":"e-117"},"instant":false},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6e8"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":0,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-118":{"id":"e-118","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-119"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f2"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-119":{"id":"e-119","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-118"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f2"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-120":{"id":"e-120","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-17","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-121"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f4"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-121":{"id":"e-121","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-18","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-120"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f4"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-122":{"id":"e-122","eventTypeId":"MOUSE_CLICK","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-24","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-123"}},"mediaQueries":["main","medium","small","tiny"],"target":{"appliesTo":"ELEMENT","styleBlockIds":[],"id":"5cafd0175705490444182aee|81babccc-1fab-88ab-d931-ec5abf37d6f4"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1568680036759},"e-124":{"id":"e-124","eventTypeId":"MOUSE_OVER","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-27","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-125"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".logos","originalId":"5cafd0175705490444182aee|57b52e00-3885-feeb-1d06-e1ffea51fb01","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1575513533034},"e-125":{"id":"e-125","eventTypeId":"MOUSE_OUT","action":{"id":"","actionTypeId":"GENERAL_START_ACTION","config":{"delay":0,"easing":"","duration":0,"actionListId":"a-28","affectedElements":{},"playInReverse":false,"autoStopEventId":"e-124"}},"mediaQueries":["main","medium","small","tiny"],"target":{"selector":".logos","originalId":"5cafd0175705490444182aee|57b52e00-3885-feeb-1d06-e1ffea51fb01","appliesTo":"CLASS"},"config":{"loop":false,"playInReverse":false,"scrollOffsetValue":null,"scrollOffsetUnit":null,"delay":null,"direction":null,"effectIn":null},"createdOn":1575513533036}},"actionLists":{"a-17":{"id":"a-17","title":"button-hover-in","actionItemGroups":[{"actionItems":[{"id":"a-17-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"easeIn","duration":100,"target":{"useEventTarget":"PARENT","selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"xValue":1.1,"yValue":1.1,"locked":true}}]}],"createdOn":1555113275035,"useFirstGroupAsInitialState":false},"a-18":{"id":"a-18","title":"button-hover-out","actionItemGroups":[{"actionItems":[{"id":"a-18-n-2","actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"easeIn","duration":100,"target":{"useEventTarget":"PARENT","selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"xValue":1,"yValue":1,"locked":true}}]}],"createdOn":1555113275035,"useFirstGroupAsInitialState":false},"a-3":{"id":"a-3","title":"mockups","continuousParameterGroups":[{"id":"a-3-p","type":"MOUSE_X","parameterLabel":"Mouse X","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-3-n","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c4"},"yValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-5","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6aa"},"yValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-19","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|9440a272-09f4-4df0-99ac-10a71265a1e6"},"yValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-20","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|50836dbd-b856-74ba-35c2-e3caa5f766e5"},"yValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]},{"keyframe":100,"actionItems":[{"id":"a-3-n-2","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c4"},"yValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-6","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6aa"},"yValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-21","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|9440a272-09f4-4df0-99ac-10a71265a1e6"},"yValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-22","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|50836dbd-b856-74ba-35c2-e3caa5f766e5"},"yValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]}]},{"id":"a-3-p-2","type":"MOUSE_Y","parameterLabel":"Mouse Y","continuousActionGroups":[{"keyframe":0,"actionItems":[{"id":"a-3-n-3","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c4"},"xValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-7","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6aa"},"xValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-15","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|9440a272-09f4-4df0-99ac-10a71265a1e6"},"xValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-16","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|50836dbd-b856-74ba-35c2-e3caa5f766e5"},"xValue":4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]},{"keyframe":100,"actionItems":[{"id":"a-3-n-4","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|778e256f-63b6-0bb4-3085-0286bb4bd4c4"},"xValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-8","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|f6e562be-26ae-2e39-f2e6-b2acc8cfd6aa"},"xValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-17","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|9440a272-09f4-4df0-99ac-10a71265a1e6"},"xValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-3-n-18","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"","duration":500,"target":{"id":"5cafd0175705490444182aee|50836dbd-b856-74ba-35c2-e3caa5f766e5"},"xValue":-4,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]}]}],"createdOn":1555035142163},"a-24":{"id":"a-24","title":"main-out","actionItemGroups":[{"actionItems":[{"id":"a-24-n-3","actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"ease","duration":400,"target":{"selector":".main","selectorGuids":["c663a145-06fb-1f7a-34b6-f639c4e00be1"]},"xValue":-5,"xUnit":"VW","yUnit":"PX","zUnit":"PX"}},{"id":"a-24-n-4","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"ease","duration":400,"target":{"selector":".main","selectorGuids":["c663a145-06fb-1f7a-34b6-f639c4e00be1"]},"value":1,"unit":""}}]}],"createdOn":1555176818134,"useFirstGroupAsInitialState":false},"a-15":{"id":"a-15","title":"social-hover-in","actionItemGroups":[{"actionItems":[{"id":"a-15-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"easeOut","duration":200,"locked":false,"target":{"useEventTarget":"SIBLINGS","selector":".social-underline","selectorGuids":["735cffc4-b282-a0ec-fa46-00d5692340ab"]},"widthValue":100,"widthUnit":"%","heightUnit":"PX"}}]}],"createdOn":1555113058945,"useFirstGroupAsInitialState":false},"a-16":{"id":"a-16","title":"social-hover-out","actionItemGroups":[{"actionItems":[{"id":"a-16-n","actionTypeId":"STYLE_SIZE","config":{"delay":0,"easing":"easeOut","duration":200,"locked":false,"target":{"useEventTarget":"SIBLINGS","selector":".social-underline","selectorGuids":["735cffc4-b282-a0ec-fa46-00d5692340ab"]},"widthValue":0,"widthUnit":"%","heightUnit":"PX"}}]}],"createdOn":1555113058945,"useFirstGroupAsInitialState":false},"a-4":{"id":"a-4","title":"dark-mode","actionItemGroups":[{"actionItems":[{"id":"a-4-n","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.moon","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","672ec9bd-d33f-c266-19b1-5aaf23775f74"]},"zValue":720,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-4-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.moon","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","672ec9bd-d33f-c266-19b1-5aaf23775f74"]},"value":0,"unit":""}},{"id":"a-4-n-5","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".body","selectorGuids":["dc38890a-ec18-4baa-7f5e-a0a0e5a18736"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-4-n-6","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".body","selectorGuids":["dc38890a-ec18-4baa-7f5e-a0a0e5a18736"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-7","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".overlay-link","selectorGuids":["a9306f26-0d49-bbd6-b530-7935383c12b6"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-8","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".overlay-divider","selectorGuids":["4aa8f8fc-c03e-6953-e771-7dbcc9bb1fa9"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-13","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".social-underline","selectorGuids":["735cffc4-b282-a0ec-fa46-00d5692340ab"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-9","actionTypeId":"STYLE_BORDER","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-10","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-12","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":200,"globalSwatchId":"20899c2d","target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-4-n-14","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-15","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-4-n-4","actionTypeId":"STYLE_OPACITY","config":{"delay":300,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.sun","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","92d7a1d8-71bd-1ee5-2be3-21f5f79b687f"]},"value":1,"unit":""}},{"id":"a-4-n-3","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":300,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.sun","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","92d7a1d8-71bd-1ee5-2be3-21f5f79b687f"]},"zValue":720,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]}],"createdOn":1555040648858,"useFirstGroupAsInitialState":false},"a-5":{"id":"a-5","title":"light-mode","actionItemGroups":[{"actionItems":[{"id":"a-5-n-3","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"target":{"selector":".body","selectorGuids":["dc38890a-ec18-4baa-7f5e-a0a0e5a18736"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-5-n-4","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".body","selectorGuids":["dc38890a-ec18-4baa-7f5e-a0a0e5a18736"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-5","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".overlay-link","selectorGuids":["a9306f26-0d49-bbd6-b530-7935383c12b6"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-6","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".overlay-divider","selectorGuids":["4aa8f8fc-c03e-6953-e771-7dbcc9bb1fa9"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-13","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".social-underline","selectorGuids":["735cffc4-b282-a0ec-fa46-00d5692340ab"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-14","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-15","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-7","actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.sun","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","92d7a1d8-71bd-1ee5-2be3-21f5f79b687f"]},"value":0,"unit":""}},{"id":"a-5-n-8","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":0,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.sun","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","92d7a1d8-71bd-1ee5-2be3-21f5f79b687f"]},"zValue":0,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}},{"id":"a-5-n-9","actionTypeId":"STYLE_BORDER","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-12","actionTypeId":"STYLE_BACKGROUND_COLOR","config":{"delay":0,"easing":"ease","duration":200,"target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":255,"gValue":255,"bValue":255,"aValue":1}},{"id":"a-5-n-10","actionTypeId":"STYLE_TEXT_COLOR","config":{"delay":0,"easing":"ease","duration":600,"globalSwatchId":"20899c2d","target":{"selector":".button","selectorGuids":["f99b0ccf-2a11-679b-0d0f-3c2bc022f1d4"]},"rValue":26,"gValue":26,"bValue":26,"aValue":1}},{"id":"a-5-n-2","actionTypeId":"STYLE_OPACITY","config":{"delay":300,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.moon","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","672ec9bd-d33f-c266-19b1-5aaf23775f74"]},"value":1,"unit":""}},{"id":"a-5-n","actionTypeId":"TRANSFORM_ROTATE","config":{"delay":300,"easing":"easeOut","duration":600,"target":{"useEventTarget":"CHILDREN","selector":".darkmode.moon","selectorGuids":["880c2ebf-c550-369a-c437-611d03253fe6","672ec9bd-d33f-c266-19b1-5aaf23775f74"]},"zValue":0,"xUnit":"DEG","yUnit":"DEG","zUnit":"DEG"}}]}],"createdOn":1555040648858,"useFirstGroupAsInitialState":false},"a-27":{"id":"a-27","title":"logo-hover-in","actionItemGroups":[{"actionItems":[{"id":"a-27-n","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"easeInOut","duration":200,"target":{"useEventTarget":true,"id":"5cafd0175705490444182aee|57b52e00-3885-feeb-1d06-e1ffea51fb01"},"filters":[{"type":"grayscale","filterId":"cd97","value":0,"unit":"%"}]}}]}],"createdOn":1575513551080,"useFirstGroupAsInitialState":false},"a-28":{"id":"a-28","title":"logo-hover-out","actionItemGroups":[{"actionItems":[{"id":"a-28-n","actionTypeId":"STYLE_FILTER","config":{"delay":0,"easing":"easeInOut","duration":200,"target":{"useEventTarget":true,"id":"5cafd0175705490444182aee|57b52e00-3885-feeb-1d06-e1ffea51fb01"},"filters":[{"type":"grayscale","filterId":"8e36","value":100,"unit":"%"}]}}]}],"createdOn":1575513729981,"useFirstGroupAsInitialState":false},"pop":{"id":"pop","actionItemGroups":[{"actionItems":[{"actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outQuart","duration":250,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0.7500000000000001,"yValue":0.7500000000000001}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_SCALE","config":{"delay":0,"easing":"outElastic","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":1,"yValue":1}}]}]},"slideInBottom":{"id":"slideInBottom","useFirstGroupAsInitialState":true,"actionItemGroups":[{"actionItems":[{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":0}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"duration":0,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":100,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}}]},{"actionItems":[{"actionTypeId":"TRANSFORM_MOVE","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"xValue":0,"yValue":0,"xUnit":"PX","yUnit":"PX","zUnit":"PX"}},{"actionTypeId":"STYLE_OPACITY","config":{"delay":0,"easing":"outQuart","duration":1000,"target":{"id":"N/A","appliesTo":"TRIGGER_ELEMENT","useEventTarget":true},"value":1}}]}]}},"site":{"mediaQueries":[{"key":"main","min":992,"max":10000},{"key":"medium","min":768,"max":991},{"key":"small","min":480,"max":767},{"key":"tiny","min":0,"max":479}]}}
 );
