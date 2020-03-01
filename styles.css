@@ -20,6 +20,7 @@ a {
 body {
     font-size: 1.8rem;
     line-height: 160%;
+    letter-spacing: -.1px;
 }
 
 .content {
@@ -38,6 +39,7 @@ h1 {
     font-weight: 700;
     line-height: 100%;
     margin-bottom: 24px;
+    letter-spacing: -.2px;
     color: var(--text-primary);
 }
 
@@ -62,7 +64,7 @@ img {
 .link li {
     display: inline-block;
     margin-right: 4px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .link li:last-child {
@@ -89,7 +91,11 @@ img {
 
 p {
     margin-bottom: 24px;
-    max-width: 645px;
+    max-width: 650px;
+}
+
+span {
+    display: inline-block;
 }
 
 @media all and (max-width: 760px) {
