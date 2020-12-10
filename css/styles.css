@@ -63,6 +63,7 @@ html {
 .body-copy {
   margin-bottom: 0px;
   color: var(--text-primary);
+  max-width: 560px;
 }
 
 .body-copy.small {
