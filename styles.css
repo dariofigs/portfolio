@@ -48,6 +48,7 @@ h2 {
     font-size: var(--text-size-display);
     line-height: var(--line-height-display);
     margin-bottom: 8px;
+    letter-spacing: -1.5px;
 }
 
 a {
@@ -177,6 +178,12 @@ em {
     background-size: cover;
 }
 
+#projects #fnsz-app a:hover {
+    background-image: url(img/fnsz-app.png);
+    background-position: center 10%;
+    background-size: cover;
+}
+
 #projects #genial a:hover {
     background-image: url(img/genial.jpg);
     background-position: center 74%;
@@ -192,6 +199,12 @@ em {
 #projects #wiggles a:hover {
     background-image: url(img/wiggle.jpg);
     background-position: center 63%;
+    background-size: cover;
+}
+
+#projects #portfolio a:hover {
+    background-image: url(img/u-r-here.png);
+    background-position: center center;
     background-size: cover;
 }
 
