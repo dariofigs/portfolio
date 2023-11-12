@@ -1,5 +1,5 @@
 @import url(reset.css);
-/* @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 :root {
     --black: #1B1B1B;
@@ -73,25 +73,16 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     border-bottom: var(--border-width) solid var(--border-color);
-    position: relative;
-    /* font-size: 1.8rem; */
+    position: sticky;
+    top: 0;
 }
 
 nav a {
     color: var(--text-color-primary);
     text-decoration: none;
-    /* font-family: var(--font-secondary); */
     margin: 12px 40px;
+    font-family: var(--font-secondary);
 }
-
-/* nav item borders */
-/* nav a:nth-of-type(1) {
-    border-right: var(--border-width) solid var(--border-color);
-}
-
-nav a:nth-of-type(2) {
-    border-left: var(--border-width) solid var(--border-color);
-} */
 
 nav img {
     height: 40px;
@@ -106,7 +97,7 @@ main {
     overflow: hidden;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: 50vw auto;
-    gap: 2px;
+    gap: var(--border-width);
 }
 
 #about {
@@ -122,6 +113,8 @@ main {
 em {
     font-style: oblique;
     color: var(--text-color-secondary);
+    font-family: var(--font-secondary);
+    letter-spacing: -1px;
 }
 
 #me {
@@ -158,23 +151,8 @@ em {
     grid-template-columns: 50% 2fr 1fr;
 }
 
-/* project table borders */
-/* .table-row span:nth-of-type(1), .table-header span:nth-of-type(1) {
-    border-right: calc(var(--border-width)/2) solid var(--border-color);
-}
-
-.table-row span:nth-of-type(2), .table-header span:nth-of-type(2) {
-    border-left: calc(var(--border-width)/2) solid var(--border-color);
-}
-
-.table-row span:nth-of-type(3), .table-header span:nth-of-type(3) {
-    text-align: right;
-    border-left: var(--border-width) solid var(--border-color);
-}  */
-
 #projects a {
     text-decoration: none;
-    transition: background-color .1s ease-out;
     color: var(--text-color-primary);
 }
 
@@ -184,26 +162,70 @@ em {
 
 #projects a:hover {
     background: var(--background-secondary);
-    transition-timing-function: ease-in;
     color: var(--white);
+}
+
+#projects #nyny a:hover {
+    background-image: url(img/nyny.jpg);
+    background-position: center 60%;
+    background-size: cover;
+}
+
+#projects #wheel a:hover {
+    background-image: url(img/wheel.png);
+    background-position: center 7%;
+    background-size: cover;
+}
+
+#projects #genial a:hover {
+    background-image: url(img/genial.jpg);
+    background-position: center 74%;
+    background-size: cover;
+}
+
+#projects #wedding a:hover {
+    background-image: url(img/th.jpg);
+    background-position: center 15%;
+    background-size: cover;
+}
+
+#projects #wiggles a:hover {
+    background-image: url(img/wiggle.jpg);
+    background-position: center 63%;
+    background-size: cover;
 }
 
 .table-header {
     color: var(--text-color-secondary);
+    font-family: var(--font-secondary);
 }
 
 #design {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
+    grid-auto-rows: 240px;
 }
 
 #design div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 16px;
+    border-bottom: var(--border-width) solid var(--border-color);
+    border-right: var(--border-width) solid var(--border-color);
+}
+
+#design div:nth-of-type(3) {
+    border-right: none;
+}
+
+#design div:nth-of-type(4) {
+    border-bottom: none;
 }
 
 #design div p:first-of-type {
     color: var(--text-color-secondary);
+    font-family: var(--font-secondary);
 }
 
 @media screen and (max-width: 1015px) {
