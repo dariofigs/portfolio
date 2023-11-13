@@ -1,5 +1,4 @@
 @import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
 
 :root {
     --black: #1B1B1B;
@@ -7,8 +6,8 @@
     --grey: #656563;
     --border-color: var(--black);
     --border-width: 2px;
+    --border-offset: calc(var(--border-width)/2);
     --font-primary: 'Inter';
-    --font-secondary: 'IBM Plex Mono';
     --font-weight-normal: 420;
     --font-weight-heavy: 720;
     --text-size-body: clamp(1.8rem, 1vw + 1rem, 2rem );
@@ -41,6 +40,7 @@ body {
     font-size: var(--text-size-body);
     font-variation-settings: 'wght' var(--font-weight-normal);
     line-height: var(--line-height-body);
+    letter-spacing: -.2px;
 }
 
 h2 {
@@ -74,15 +74,18 @@ nav {
     flex-direction: row;
     justify-content: space-between;
     border-bottom: var(--border-width) solid var(--border-color);
+    background-color: var(--background-primary);
+    background-color: var(--background-primary);
     position: sticky;
     top: 0;
+    padding: 0 16px;
+    z-index: 1;
 }
 
 nav a {
     color: var(--text-color-primary);
     text-decoration: none;
-    margin: 12px 40px;
-    font-family: var(--font-secondary);
+    margin: 12px 0;
 }
 
 nav img {
@@ -114,7 +117,6 @@ main {
 em {
     font-style: oblique;
     color: var(--text-color-secondary);
-    font-family: var(--font-secondary);
     letter-spacing: -1px;
 }
 
@@ -136,13 +138,12 @@ em {
     padding: 12px 0;
 }
 
-#projects span:nth-of-type(1) {
-    padding-left: 16px;
-}
-
 #projects span:nth-of-type(3) {
     text-align: right;
-    padding-right: 16px;
+}
+
+.table-header, #projects .soon a {
+    color: var(--text-color-secondary);
 }
 
 .table-row a, .table-header{
@@ -150,6 +151,7 @@ em {
     width: 100%;
     box-sizing: border-box;
     grid-template-columns: 50% 2fr 1fr;
+    padding: 0 16px;
 }
 
 #projects a {
@@ -166,88 +168,119 @@ em {
     color: var(--white);
 }
 
-#projects #nyny a:hover {
+#nyny a:hover {
     background-image: url(img/nyny.jpg);
     background-position: center 60%;
     background-size: cover;
 }
 
-#projects #wheel a:hover {
-    background-image: url(img/wheel.png);
-    background-position: center 7%;
+#untitled a:hover {
+    background-image: url(img/untitled.jpg);
     background-size: cover;
+    background-position: center 66%;
 }
 
-#projects #fnsz-app a:hover {
-    background-image: url(img/fnsz-app.png);
-    background-position: center 10%;
-    background-size: cover;
-}
-
-#projects #genial a:hover {
+#genial a:hover {
     background-image: url(img/genial.jpg);
     background-position: center 74%;
     background-size: cover;
 }
 
-#projects #wedding a:hover {
+#wedding a:hover {
     background-image: url(img/th.jpg);
     background-position: center 15%;
     background-size: cover;
 }
 
-#projects #wiggles a:hover {
+#wiggles a:hover {
     background-image: url(img/wiggle.jpg);
     background-position: center 63%;
     background-size: cover;
 }
 
-#projects #portfolio a:hover {
-    background-image: url(img/u-r-here.png);
-    background-position: center center;
-    background-size: cover;
-}
-
-.table-header {
-    color: var(--text-color-secondary);
-    font-family: var(--font-secondary);
-}
-
 #design {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 240px;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-auto-rows: 180px;
+    gap: var(--border-width);
+    margin-top: calc(var(--border-width)/2*-1);
 }
 
 #design div {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 16px;
-    border-bottom: var(--border-width) solid var(--border-color);
-    border-right: var(--border-width) solid var(--border-color);
 }
 
-#design div:nth-of-type(3) {
-    border-right: none;
+#design div::before, 
+#design div::after {
+    content: '';
+    position: absolute;
+    background-color: var(--border-color);
 }
 
-#design div:nth-of-type(4) {
-    border-bottom: none;
+#design div::after {
+    inline-size: 100vw;
+    block-size: var(--border-width);
+    inset-inline-start: 0;
+    inset-block-start: calc(var(--border-offset) * -1);
+}
+
+#design div::before {
+    inline-size: var(--border-width);
+    block-size: 100vh;
+    inset-inline-start: calc(var(--border-offset) * -1);
+    top: 0;
 }
 
 #design div p:first-of-type {
     color: var(--text-color-secondary);
-    font-family: var(--font-secondary);
+}
+
+footer {
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+}
+
+footer a {
+    color: inherit;
+}
+
+footer a:hover {
+    color: var(--white);
+}
+
+::selection {
+    background: var(--background-secondary);
+    color: var(--white);
+}
+
+footer *::selection {
+    background: var(--background-primary);
+    color: var(--text-color-primary);
 }
 
 @media screen and (max-width: 1015px) {
     main {
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr auto;
+        grid-template-rows: 75vh auto;
     }
 
     #about {
         padding-top: 20vw;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #me {
+        display: none;
     }
 }
