@@ -8,14 +8,12 @@
     --border-width: 2px;
     --border-offset: calc(var(--border-width)/2);
     --font-primary: 'Inter';
-    --font-weight-normal: 420;
+    --font-weight-normal: 380;
     --font-weight-heavy: 720;
-    --text-size-body: clamp(1.8rem, 1vw + 1rem, 2rem );
-    --text-size-large: clamp(2.2rem, 1vw + 1rem, 2.8rem );
-    --text-size-display: clamp(4.4rem, 5vw + 1rem, 6.8rem );
+    --text-size-body: clamp(1.8rem, 1vw + 1rem, 2rem);
+    --text-size-large: clamp(2.4rem, 2vw + 1rem, 4rem);
     --line-height-body: 140%;
-    --line-height-large: 150%;
-    --line-height-display: 95%;
+    --line-height-large: 125%;
     --background-primary: var(--white);
     --background-secondary: var(--black);
     --text-color-primary: var(--black);
@@ -43,19 +41,11 @@ body {
     letter-spacing: -.2px;
 }
 
-h2 {
-    font-variation-settings: "wght" var(--font-weight-heavy);
-    font-size: var(--text-size-display);
-    line-height: var(--line-height-display);
-    margin-bottom: 8px;
-    letter-spacing: -1.5px;
-}
-
 a {
     color: var(--text-color-secondary);
     transition: color .1s ease-out;
     text-decoration-thickness: 1px;
-    text-underline-offset: 4px;
+    text-underline-offset: 3px;
     text-decoration-skip-ink: auto;
     
 }
@@ -65,8 +55,8 @@ a:hover {
     transition: color .1s ease-in;
 }
 
-nav, main > section {
-    background-color: var(--background-primary);
+em {
+    font-style: oblique;
 }
 
 nav {
@@ -80,6 +70,7 @@ nav {
     top: 0;
     padding: 0 16px;
     z-index: 1;
+    background-color: var(--background-primary);
 }
 
 nav a {
@@ -88,166 +79,163 @@ nav a {
     margin: 12px 0;
 }
 
-nav img {
-    height: 40px;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
 main {
-    display: grid;
-    overflow: hidden;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-rows: 50vw auto;
+    display: flex;
+    flex-direction: column;
     gap: var(--border-width);
 }
 
-#about {
-    padding: 40px;
+.about {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    font-size: var(--text-size-large);
+    line-height: var(--line-height-large);
     display: flex;
     flex-direction: column;
-    gap: 8px;
     justify-content: flex-end;
-    font-size: var(--text-size-large);
-    line-height: var(--line-height-body);
+    padding: 40px;
 }
 
-em {
-    font-style: oblique;
-    color: var(--text-color-secondary);
-    letter-spacing: -1px;
-}
-
-#me {
-    background: url(img/headshot-mono.jpg);
+#hero .me {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    width: 100%;
+    background-image: url(img/headshot-mono.jpg);
     background-position: center center;
     background-size: cover;
 }
 
-#projects, #design {
-    grid-column: span 2;
+.me::before {
+    content: '';
+    display: inline-block;
+    padding-bottom: 100%;
 }
 
-#projects div:not(:last-of-type) {
-    border-bottom: var(--border-width) solid var(--border-color);
+.availability {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    padding: 16px 16px 16px 32px;
+    display: flex;
+    gap: 10px;
+    position: relative;
 }
 
-#projects span {
-    padding: 12px 0;
+.availability::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background: #E2727F;
+    border-radius: 2px;
+    left: 20px;
+    top: 26px;
 }
 
-#projects span:nth-of-type(3) {
-    text-align: right;
+.grid, #hero {
+    display: grid;
+    gap: var(--border-width);
 }
 
-.table-header, #projects .soon a {
+.grid > div, #hero > div {
+    position: relative;
+}
+
+.grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: calc(15vw + 24px);
+    grid-auto-flow: dense;
+}
+
+.grid div {
+    padding: 16px;
+    background: var(--background-primary);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid div p:first-of-type {
     color: var(--text-color-secondary);
 }
 
-.table-row a, .table-header{
-    display: grid;
-    width: 100%;
-    box-sizing: border-box;
-    grid-template-columns: 50% 2fr 1fr;
-    padding: 0 16px;
+.header {
+    grid-column: span 4;
 }
 
-#projects a {
+#hero {
+    grid-template-columns: auto 35vw;
+    grid-template-rows: auto auto;
+    background: var(--background-secondary);
+}
+
+#hero div {
+    background: var(--background-primary);
+}
+
+#design .item:nth-of-type(2) {
+    grid-column: span 2;
+}
+
+#design .item:nth-of-type(5), #design .item:nth-of-type(6) {
+    grid-row: 2 / span 2;
+}
+
+#dev {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#photo .item {
+    grid-row: span 2;
+    padding: 0;
+}
+
+#photo .item a {
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-decoration: none;
     color: var(--text-color-primary);
 }
 
-#gt a, #wheel a, #fnsz-app a, #portfolio a {
-    cursor: not-allowed;
+#photo .item a:hover > * {
+    color: var(--white) !important;
 }
 
-#projects a:hover {
-    background: var(--background-secondary);
-    color: var(--white);
-}
-
-#nyny a:hover {
-    background-image: url(img/nyny.jpg);
-    background-position: center 60%;
+#ny a:hover {
+    background: url(img/nyny.jpg);
     background-size: cover;
+    background-position: 60% center;
 }
 
 #untitled a:hover {
-    background-image: url(img/untitled.jpg);
+    background: url(img/untitled.jpg);
     background-size: cover;
-    background-position: center 66%;
+    background-position: center center;
 }
 
 #genial a:hover {
-    background-image: url(img/genial.jpg);
-    background-position: center 74%;
+    background: url(img/genial.jpg);
     background-size: cover;
+    background-position: center center;
 }
 
-#wedding a:hover {
-    background-image: url(img/th.jpg);
-    background-position: center 15%;
+#wiggle a:hover {
+    background: url(img/wiggle.jpg);
     background-size: cover;
-}
-
-#wiggles a:hover {
-    background-image: url(img/wiggle.jpg);
-    background-position: center 63%;
-    background-size: cover;
-}
-
-#design {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-    grid-auto-rows: 180px;
-    gap: var(--border-width);
-    margin-top: calc(var(--border-width)/2*-1);
-}
-
-#design div {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 16px;
-}
-
-#design div::before, 
-#design div::after {
-    content: '';
-    position: absolute;
-    background-color: var(--border-color);
-}
-
-#design div::after {
-    inline-size: 100vw;
-    block-size: var(--border-width);
-    inset-inline-start: 0;
-    inset-block-start: calc(var(--border-offset) * -1);
-}
-
-#design div::before {
-    inline-size: var(--border-width);
-    block-size: 100vh;
-    inset-inline-start: calc(var(--border-offset) * -1);
-    top: 0;
-}
-
-#design div p:first-of-type {
-    color: var(--text-color-secondary);
+    background-position: center bottom;
 }
 
 footer {
-    padding: 12px;
-    display: flex;
-    justify-content: center;
+    padding: 16px;
     color: var(--white);
+    text-align: center;
 }
 
 footer a {
-    color: inherit;
+    color: var(--white);
 }
 
 footer a:hover {
@@ -259,28 +247,36 @@ footer a:hover {
     color: var(--white);
 }
 
-footer *::selection {
+footer ::selection {
     background: var(--background-primary);
     color: var(--text-color-primary);
 }
 
-@media screen and (max-width: 1015px) {
-    main {
-        grid-template-rows: 75vh auto;
+@media screen and (max-width: 1100px) {
+    #design .item:nth-of-type(5), #design .item:nth-of-type(6){
+        grid-column: span 2;
+        grid-row: span 1;
     }
 
-    #about {
-        padding-top: 20vw;
+    #design .item:nth-of-type(3) {
+        grid-column: span 4;
+    }
+
+    #design .item:nth-of-type(4) {
+        grid-column: span 2;
     }
 }
 
-@media screen and (max-width: 780px) {
-    main {
-        display: flex;
-        flex-direction: column;
+@media screen and (max-width: 800px) {
+    #design .item {
+        grid-column: span 4 !important;
     }
 
-    #me {
-        display: none;
+    #dev .item {
+        grid-column: span 3;
+    }
+
+    #photo .item {
+        grid-column: span 2;
     }
 }
