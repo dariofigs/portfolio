@@ -280,3 +280,22 @@ footer ::selection {
         grid-column: span 2;
     }
 }
+
+@media screen and (max-width: 585px) {
+    .grid {
+        grid-auto-rows: auto;
+    }
+
+    #hero {
+        grid-template-columns: 1fr;
+    }
+
+    .about {
+        grid-column: 1 / 2;
+        grid-row: 1 / 4;
+    }
+
+    .me, .availability {
+        display: none;
+    }
+}
