@@ -1,11 +1,11 @@
 @import url(reset.css);
 
 :root {
-    --black: #1B1B1B;
-    --white: #EFEEE7;
+    --black: #434138;
+    --white: #DCD8C5;
     --grey: #656563;
     --border-color: var(--black);
-    --border-width: 2px;
+    --border-width: 1.5px;
     --border-offset: calc(var(--border-width)/2);
     --font-primary: 'Inter';
     --font-weight-normal: 380;
@@ -125,10 +125,10 @@ main {
     width: 10px;
     height: 10px;
     position: absolute;
-    background: #E2727F;
-    border-radius: 2px;
+    border: var(--border-width) solid var(--grey);
+    border-radius: 3px;
     left: 20px;
-    top: 26px;
+    top: 24px;
 }
 
 .grid, #hero {
@@ -297,5 +297,9 @@ footer ::selection {
 
     .me, .availability {
         display: none;
+    }
+
+    #photo {
+        grid-auto-rows: 18vh;
     }
 }
