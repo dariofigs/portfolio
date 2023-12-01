@@ -173,6 +173,10 @@ main {
     background: var(--background-primary);
 }
 
+#design, #dev, #photo {
+    scroll-margin-top: 52.5px;
+}
+
 #design .item:nth-of-type(2) {
     grid-column: span 2;
 }
