@@ -110,6 +110,10 @@ footer {
     backdrop-filter: blur(10px);
 }
 
+.case-study footer {
+    margin-top: 0;
+}
+
 .case-study h1 {
     padding-bottom: 24px;
     border-bottom: 1px solid var(--border);
@@ -297,6 +301,7 @@ main section {
 
 .one-up, .two-up, .three-up {
     margin-bottom: 24px;
+    align-items: center;
 }
 
 .two-up {
