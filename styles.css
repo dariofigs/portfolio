@@ -95,12 +95,6 @@ footer {
     padding-top: 64px;
 }
 
-.intro span {
-    size: var(--size-04);
-    color: var(--text-secondary);
-    margin-bottom: 2px;
-}
-
 .case-study nav {
     position: relative;
 }
@@ -203,6 +197,7 @@ main section {
 .work-item h3 {
     font-size: var(--size-02);
     font-weight: 500;
+    text-wrap: balance;
 }
 
 .work-item a {
@@ -219,6 +214,10 @@ main section {
 .work-item a:hover {
     background-size: 100% 100%;
     transition: all .1s ease-in-out;
+}
+
+#experience {
+    padding-top: 40px;
 }
 
 .experience-item {
