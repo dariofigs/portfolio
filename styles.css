@@ -11,7 +11,7 @@
     --bg-secondary: #F7F7F7;
     --bg-tertiary: hsl(240 10% 10% / 1);
     --border: hsl(240 10% 10% / .1);
-    --link: hsl(198 100% 87% / .6);
+    --link: hsl(212 92% 80% / .5);
     --available: #8FEBA0;
 
     /* text */
@@ -59,6 +59,10 @@ nav {
 nav a {
     text-decoration: underline;
     color: var(--text-secondary);
+}
+
+nav a:hover, footer a:hover {
+    color: var(--text-primary);
 }
 
 main, footer .wrapper, .intro .wrapper {
