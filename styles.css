@@ -75,6 +75,7 @@ footer .wrapper {
     display: flex;
     justify-content: space-between;
     padding: 40px;
+    align-items: center;
 }
 
 footer {
@@ -260,6 +261,7 @@ main section {
 
 .team div {
     display: flex;
+    flex-wrap: wrap;
     gap: 4px;
 }
 
@@ -294,6 +296,7 @@ main section {
     gap: 40px;
     margin: 0 auto;
     margin-bottom: 80px;
+    width: 75%;
     max-width: 960px;
 }
 
@@ -363,4 +366,55 @@ button {
 button:hover {
     opacity: 1;
     cursor: pointer;
+}
+
+@media screen and (max-width: 830px) {
+    footer .wrapper {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .two-up, .three-up {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #work .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .metadata, .header {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #work .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-item {
+        flex-direction: column-reverse;
+        align-items: start;
+        gap: 4px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    footer .wrapper {
+        align-items: start;
+        gap: 12px;
+    }
+
+    #links {
+        flex-direction: column;
+        gap: 4px;
+    }
 }
