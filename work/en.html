@@ -10,7 +10,31 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
     <link rel="manifest" href="../site.webmanifest">
 </head>
-<body class="case-study">
+<body class="case-study protected">
+    <div id="password-modal">
+        <div>
+            <input type="password" placeholder="Password" id="password">
+            <button onclick="protectpasscode()"><img src="../resources/assets/arrow-right.svg" alt="Submit"></button>
+        </div>
+        <script>
+            function protectpasscode() {
+               const result = document.getElementById("password").value;
+               let passcode = 'please';
+               let space = '';
+               if (result == space) {
+                  alert("Enter the password")
+               } else {
+                  if (result == passcode) {
+                     document.getElementById('password-modal').style.display = 'none';
+                     document.querySelector('body').style.overflow = 'scroll';
+                  } else {
+                     alert("Incorrect Password");
+                     location.reload();
+                  }
+               }
+            }
+        </script>
+    </div>
     <nav>
         <a href="../index.html"><img src="../resources/assets/x-mark.svg" alt="Close"></a>
     </nav>

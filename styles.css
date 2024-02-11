@@ -326,3 +326,41 @@ main section {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
+
+.case-study.protected {
+    overflow: hidden;
+}
+
+#password-modal {
+    z-index: 999;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-secondary);
+}
+
+#password-modal div {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px 6px 16px;
+    border-radius: 100px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border);
+}
+
+input {
+    all: unset;
+}
+
+button {
+    all: unset;
+    opacity: .5;
+}
+
+button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
