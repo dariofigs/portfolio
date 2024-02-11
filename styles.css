@@ -108,6 +108,10 @@ footer {
     backdrop-filter: blur(10px);
 }
 
+.case-study nav a:hover {
+    filter: brightness(.9);
+}
+
 .case-study .intro {
     padding-top: 0;
 }
