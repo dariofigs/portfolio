@@ -152,7 +152,8 @@ footer {
 }
 
 #availability {
-    color: var(--available);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
 }
 
 #availability::before {
@@ -160,7 +161,7 @@ footer {
     content: "";
     width: 6px;
     height: 6px;
-    background: var(--available);
+    background: var(--text-secondary);
     border-radius: 50%;
 }
 
