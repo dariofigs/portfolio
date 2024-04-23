@@ -96,6 +96,20 @@ footer {
     padding-top: 64px;
 }
 
+.intro .flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+}
+
+#headshot {
+    width: 25%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 .case-study nav {
     position: relative;
 }
@@ -383,6 +397,10 @@ button:hover {
 @media screen and (max-width: 820px) {
     #work .wrapper {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    #headshot {
+        display: none;
     }
 }
 
